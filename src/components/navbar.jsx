@@ -73,6 +73,7 @@ function Navbar() {
                     <div className="bg-gray-900 h-fit sidebar2 text-white p-4 absolute">
                         <div className="w-full h-1 bg-green-500"></div>
                         <ul className="bg-gray-900">
+                            <li className=" p-1 px-5 my-3 hover:bg-gray-700">My Profile</li>
                             <li className=" p-1 px-5 my-3 hover:bg-gray-700">My Courses</li>
                             <li className="p-1 px-5 my-3 hover:bg-gray-700">Edit Profile</li>
                             <li className="p-1 px-5 my-3 hover:bg-gray-700">Logout</li>
