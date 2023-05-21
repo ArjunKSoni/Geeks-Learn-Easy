@@ -1,6 +1,5 @@
 import { React } from "react";
 import { FiChevronDown, FiAlignJustify } from "react-icons/fi";
-import { FaBeer } from 'react-icons/fa';
 
 function Navbar() {
     return (
