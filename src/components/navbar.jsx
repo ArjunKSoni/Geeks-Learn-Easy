@@ -4,25 +4,25 @@ import { FiChevronDown, FiAlignJustify } from "react-icons/fi";
 function Navbar() {
     return (
         <div>
-            <div className=' p-2  z-10 bg-gray-900 h-fit w-screen flex-wrap reshide'>
+            <div className=' p-2  z-10 bg-black h-fit w-screen flex-wrap reshide'>
                 <div className='flex gap-3 items-center justify-start flex-1'>
                     <ul className=' pl-4 flex gap-7 flex-wrap items-center justify-center'>
                         <li className="text1 hover:cursor-pointer"><div className='text-white flex py-2 gap-1 items-center justify-center font-bold'>Courses <FiChevronDown className=' mt-1  effecth' /></div>
-                            <div className={`text-white absolute disnone `}>
+                            <div className={`text-white absolute disnone mr-4`}>
                                 <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                                <ul className="bg-gray-900">
-                                    <li className="p-1 px-2 hover:bg-gray-700">DBMS</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">CNP</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">Oops</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">Sensor Technology</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">Technical English</li>
+                                <ul className="bg-gray-800 ">
+                                    <li className="p-1 px-3 hover:bg-gray-700">DBMS</li>
+                                    <li className="p-1 px-3 hover:bg-gray-700">CNP</li>
+                                    <li className="p-1 px-3 hover:bg-gray-700">Oops</li>
+                                    <li className="p-1 px-3 hover:bg-gray-700">Sensor Technology</li>
+                                    <li className="p-1 px-3 hover:bg-gray-700">Technical English</li>
                                 </ul>
                             </div>
                         </li>
                         <li className="text2 hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>PYQ's <FiChevronDown className=' mt-1 effecth' /></div>
                             <div className={`text-white absolute disnone`}>
                                 <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                                <ul className="bg-gray-900">
+                                <ul className="bg-gray-800">
                                     <li className="p-1 px-2 hover:bg-gray-700">MidSem-1</li>
                                     <li className="p-1 px-2 hover:bg-gray-700">MidSem-2</li>
                                     <li className="p-1 px-2 hover:bg-gray-700">EndSem</li>
@@ -41,7 +41,7 @@ function Navbar() {
                     <div className="user"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} />
                         <div className={`text-white absolute disnone right-5`}>
                             <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                            <ul className="bg-gray-900">
+                            <ul className="bg-gray-800">
                                 <li className="p-1 px-2 hover:bg-gray-700">My Profile</li>
                                 <li className="p-1 px-2 hover:bg-gray-700">My Courses</li>
                                 <li className="p-1 px-2 hover:bg-gray-700">Edit Profile</li>
@@ -52,7 +52,7 @@ function Navbar() {
                 </div>
             </div >
             {/* *********************************************************************************************************** */}
-            <div className="nonres  z-10   p-2 bg-gray-900 items-center justify-center h-fit w-screen flex-wrap">
+            <div className="nonres  z-10   p-2 bg-black items-center justify-center h-fit w-screen flex-wrap">
                 <div className=" text4 items-center justify-center"><FiAlignJustify className="invert text-3xl " />
                     <div className="bg-gray-900 h-screen sidebar text-white p-4 absolute">
                         <div className="w-full h-1 bg-green-500"></div>

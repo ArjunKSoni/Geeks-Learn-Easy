@@ -65,4 +65,17 @@ ul li:hover .effecth {
   overflow: hidden;
 }
 }
+/* **************************nav****************** */
+.sideDec {
+  width: 250px;
+  height: 89.8vh;
+}
 
+.body {
+  height: 89.8vh;
+  background-color: rgb(24, 24, 24);
+}
+
+.bgbla {
+  background-color: rgb(24, 24, 24);
+}
