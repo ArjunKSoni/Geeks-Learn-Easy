@@ -4,7 +4,7 @@ import { FiChevronDown, FiAlignJustify } from "react-icons/fi";
 function Navbar() {
     return (
         <div>
-            <div className=' p-2  z-10 bg-black h-fit w-screen flex-wrap reshide'>
+            <div className=' p-2  z-10 bg-black h-fit flex-wrap reshide'>
                 <div className='flex gap-3 items-center justify-start flex-1'>
                     <ul className=' pl-4 flex gap-7 flex-wrap items-center justify-center'>
                         <li className="text1 hover:cursor-pointer"><div className='text-white flex py-2 gap-1 items-center justify-center font-bold'>Courses <FiChevronDown className=' mt-1  effecth' /></div>
