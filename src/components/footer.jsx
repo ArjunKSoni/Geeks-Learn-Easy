@@ -47,6 +47,9 @@ export default function Footer() {
                 </div>
 
             </div>
+            <div className='footerCopy p-1 flex items-center justify-center'>
+                ©All Rights Reserved || @Geeks Learn Easy
+            </div>
         </div>
     )
 }
