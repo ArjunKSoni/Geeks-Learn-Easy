@@ -48,6 +48,9 @@ export default function Body() {
                     <li className='ml-4 font-normal flex items-center'><ImRadioChecked2 className='text-xs mt-1 mr-2' /> value 3</li>
                 </ul>
 
+                {/* page end  */}
+                <div className='p-2 text-center font-semibold text-xl'>Thank you for reading</div>
+
             </div>
             <Add />
         </div>
