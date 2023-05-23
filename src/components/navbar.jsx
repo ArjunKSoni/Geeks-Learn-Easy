@@ -1,7 +1,15 @@
-import { React } from "react";
+import { React, useContext, useState } from "react";
 import { FiChevronDown, FiAlignJustify } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import Subcontext from "../context/subContext";
 
 function Navbar() {
+    const { sub, setsub } = useContext(Subcontext)
+    // const useLinkClickHandler = (e) => {
+    //     setsub(e.target.value)
+    //     console.log(e.target.value)
+    // }
+
     return (
         <div>
             <div className=' p-2  z-10 bg-black h-fit flex-wrap reshide'>
@@ -11,11 +19,11 @@ function Navbar() {
                             <div className={`text-white absolute disnone mr-4`}>
                                 <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
                                 <ul className="bg-gray-800 ">
-                                    <li className="p-1 px-3 hover:bg-gray-700">DBMS</li>
-                                    <li className="p-1 px-3 hover:bg-gray-700">CNP</li>
-                                    <li className="p-1 px-3 hover:bg-gray-700">Oops</li>
-                                    <li className="p-1 px-3 hover:bg-gray-700">Sensor Technology</li>
-                                    <li className="p-1 px-3 hover:bg-gray-700">Technical English</li>
+                                    <Link to={"/content"}><li value={"DBMS"} className="p-1 px-3 hover:bg-gray-700">DBMS</li></Link>
+                                    <Link to={"/content"}><li value={"CNP"} className="p-1 px-3 hover:bg-gray-700">CNP</li></Link>
+                                    <Link to={"/content"}><li value={"Oops"} className="p-1 px-3 hover:bg-gray-700">Oops</li></Link>
+                                    <Link to={"/content"}><li value={"Sensor Technology"} className="p-1 px-3 hover:bg-gray-700">Sensor Technology</li></Link>
+                                    <Link to={"/content"}><li value={"Technical English"} className="p-1 px-3 hover:bg-gray-700">Technical English</li></Link>
                                 </ul>
                             </div>
                         </li>
@@ -33,18 +41,20 @@ function Navbar() {
                         <li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>Articles</div></li>
                     </ul>
                 </div>
+
                 <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center mr-10'>
-                    <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
-                    <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
+                    <Link to={"/"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
+                    <Link to={"/"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
+
                 <div className='flex mr-6 gap-4 flex-1 justify-end'>
                     <div className="user"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} />
                         <div className={`text-white absolute disnone right-5`}>
                             <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
                             <ul className="bg-gray-800">
-                                <li className="p-1 px-2 hover:bg-gray-700">My Profile</li>
-                                <li className="p-1 px-2 hover:bg-gray-700">My Courses</li>
-                                <li className="p-1 px-2 hover:bg-gray-700">Edit Profile</li>
+                                <Link to={"/profile"}><li className="p-1 px-2 hover:bg-gray-700">My Profile</li></Link>
+                                <Link to={"/editcourses"}><li className="p-1 px-2 hover:bg-gray-700">My Courses</li></Link>
+                                <Link to={"/profileEdit"}><li className="p-1 px-2 hover:bg-gray-700">Edit Profile</li></Link>
                                 <li className="p-1 px-2 hover:bg-gray-700">Logout</li>
                             </ul>
                         </div>

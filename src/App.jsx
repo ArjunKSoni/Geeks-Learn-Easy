@@ -10,17 +10,31 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Home from "./components/home";
 import Content from "./components/content";
+import Profile from "./components/profile";
+import ProfileEdit from "./components/profileEdit";
+import SubState from "./context/subState";
+import AddContent from "./components/addContent";
+import Authstate from "./context/authState";
+import EditCourses from "./components/editCourses";
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Content />
+      <Authstate>
+        <SubState>
+          <Navbar />
       <Routes>
+            <Route exact path={`/content`} element={<Content />} />
           <Route exact path='/about' element={<About />} />
-        {/* <Route exact path='/' element={<Home />} /> */}
+            <Route exact path='/profile' element={<Profile />} />
+            <Route exact path='/profileEdit' element={<ProfileEdit />} />
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/editcourses' element={<EditCourses />} />
+            <Route exact path='/addcontent' element={<AddContent />} />
       </Routes>
       <Footer />
+        </SubState>
+      </Authstate>
     </Router>
   );
 }

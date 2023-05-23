@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ImRadioChecked2 } from "react-icons/im";
 import Add from './add';
+import Subcontext from '../context/subContext';
 
 export default function Body() {
+    const { sub } = useContext(Subcontext)
     return (
         <div className=' p-3 no-scrollbar text-white body overflow-x-auto flex flex-1'>
             <div className='break-words w-3/4 p-3 pl-5'>
@@ -11,7 +13,7 @@ export default function Body() {
 
                 {/* paragraph  */}
                 <div className='mt-2'>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque nesciunt id adipisci iste, modi sunt facilis! Explicabo, ducimus molestias atque eveniet numquam modi, perspiciatis porro beatae quasi ut enim. Temporibus?
+                    Lorem ipsum dolor sit, <a className='text-green-700 font-semibold underline mx-1' href="https://www.google.com/">Arjun</a> amet consectetur adipisicing elit. Atque nesciunt id adipisci iste, modi sunt facilis! Explicabo, ducimus molestias atque eveniet numquam modi, perspiciatis porro beatae quasi ut enim. Temporibus?
                 </div>
 
                 {/* list  */}
@@ -20,6 +22,11 @@ export default function Body() {
                     {/* List with link */}<li className='ml-4 font-normal flex items-center'><ImRadioChecked2 className='text-xs mt-1 mr-2' />Click me to open<a className='text-green-700 font-semibold underline mx-1' href="https://www.google.com/">google</a>.</li>
                     <li className='ml-4 font-normal flex items-center'><ImRadioChecked2 className='text-xs mt-1 mr-2' /> value 3</li>
                 </ul>
+
+                {/* paragraph  */}
+                <div className='mt-2'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem rerum ducimus, unde qui obcaecati iste, temporibus ipsum voluptatum aspernatur similique amet molestiae repudiandae tenetur consequatur cum. Esse sint enim modi?
+                </div>
 
                 {/* sub heading  */}
                 <div className='text-2xl mt-3 font-semibold justify-center items-center flex break-words'>
@@ -57,9 +64,9 @@ export default function Body() {
     )
 }
 
-// for some bold words in between =>   <div className='font-bold'>your word</div>
+// for some bold words in between =>   <spam className='font-bold'>your word</spam>
 
-// words with greater text size =>     <div className='text-xl'>your word</div>
+// words with greater text size =>     <spam className='text-xl'>your word</spam>
 
 // for links in between =>             <a className='text-green-700 font-semibold underline mx-1' href="https://www.google.com/">google</a>
 

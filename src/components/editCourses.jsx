@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function About() {
+export default function EditCourses() {
     return (
         <div className='home min-h-screen text-white'>
-            About
+            EditCourses
         </div>
     )
 }

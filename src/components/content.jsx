@@ -1,7 +1,8 @@
-import { React } from "react";
+import { React, useContext } from "react";
 import Body from "./body";
 
 function Content() {
+
     return (
         <div className="flex">
             <div className="bgbla p-3 text-white sideDec no-scrollbar border-r-4 overflow-x-auto">

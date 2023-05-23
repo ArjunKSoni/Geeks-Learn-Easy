@@ -79,13 +79,30 @@ ul li:hover .effecth {
 .bgbla {
   background-color: rgb(24, 24, 24);
 }
+.addForm {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
 .footerBox {
   width: 300px;
 }
 
+.home {
+  background-color: rgb(24, 24, 24);
+}
 .linksbox {
   width: 300px;
 }
 .footerCopy {
   background-color: rgb(27, 26, 26);
+}
+.addmain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
 }

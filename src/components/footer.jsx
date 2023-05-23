@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <div className='bg-black h-fit footer flex-1 text-white  items-center justify-center'>
             <div className='flex items-center justify-around px-1 py-3 flex-wrap bg-fuchsia-800'>
-                <div className=' linksbox'>Get connected with us on Social Media</div>
+                <div className=' linksbox text-center'>Get connected with us on Social Media</div>
                 <div className=' linksbox justify-around flex'><AiOutlineInstagram className='text-3xl hover:invert hover:cursor-pointer' /> <FaFacebook className='text-3xl hover:invert hover:cursor-pointer' /> <FaLinkedin className='text-3xl hover:invert hover:cursor-pointer' /><FaTwitterSquare className='text-3xl hover:invert hover:cursor-pointer' /><FaYoutube className='text-3xl hover:invert hover:cursor-pointer' /></div>
             </div>
             <div className='flex  p-2 justify-around flex-wrap'>
@@ -18,10 +18,10 @@ export default function Footer() {
                         <h3 className='text-white flex font-bold text-xl'>Geeks Learn Easy</h3>
                     </div>
                     <p className='text-center mb-2 font-semibold'>A comprehensive platform for students to make learning easy</p>
-                    <p className=' break-words text-center'>This company will provide you a platform where you can get all your study related material in one place  which can help in making your learning easy and effective</p>
+                    {/* <p className=' break-words text-center'>This company will provide you a platform where you can get all your study related material in one place  which can help in making your learning easy and effective</p> */}
                 </div>
                 <div className='footerBox'>
-                    <h1 className='text-center my-4 text-white font-bold text-xl'>Creaters</h1>
+                    <h1 className='text-center my-4 text-white font-bold text-xl'>Creators</h1>
                     <a target='__blank' href="https://www.linkedin.com/in/aksoni0520/"><h1 className='text-center hover:text-green-600 mb-1'>Arjun Kumar Soni</h1></a>
                     <a target='__blank' href="https://www.linkedin.com/in/mrsus/"><h1 className='text-center hover:text-green-600 mb-1'>Om Tiwari</h1></a>
                     <a target='__blank' href="https://www.linkedin.com/in/ananya-agrawal-65b1b7252"><h1 className='text-center hover:text-green-600 mb-1'>Ananya Agrawal</h1></a>
