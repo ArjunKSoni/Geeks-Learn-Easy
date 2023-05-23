@@ -15,35 +15,25 @@ export default function Home() {
                     <p>What would you like to learn today?</p>
                 </div>
                 <div className="container2">
-                    <Link to="/subject">
-                        <div className="box2 m-4">
+                    <Link to="/subject" className='box2 m-4'>
                             <div style={{ backgroundColor: colour[0] }} className="title2 w-full text-2xl font-bold h-2/4 flex items-center justify-center">DBMS</div>
-                            <div className="sub2 flex h-2/4 items-center justify-center">Database Management System</div>
-                        </div>
+                        <div className="sub2 flex h-2/4 items-center justify-center">Database Management System</div>
                     </Link>
-                    <Link to="/subject">
-                        <div className="box2 m-4">
+                    <Link to="/subject" className="box2 m-4">
                             <div style={{ backgroundColor: colour[1] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-center">CNP</div>
-                            <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
-                        </div>
+                        <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
                     </Link>
-                    <Link to="/subject">
-                        <div className="box2 m-4">
+                    <Link to="/subject" className="box2 m-4">
                             <div style={{ backgroundColor: colour[2] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-center">Oops</div>
-                            <div className="sub2 flex h-2/4 items-center justify-center">Object oriented programming</div>
-                        </div>
+                        <div className="sub2 flex h-2/4 items-center justify-center">Object oriented programming</div>
                     </Link>
-                    <Link to="/subject">
-                        <div className="box2 m-4">
+                    <Link to="/subject" className="box2 m-4">
                             <div style={{ backgroundColor: colour[5] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-center">CNP</div>
-                            <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
-                        </div>
+                        <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
                     </Link>
-                    <Link to="/subject">
-                        <div className="box2 m-4">
+                    <Link to="/subject" className="box2 m-4">
                             <div style={{ backgroundColor: colour[4] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-center">CNP</div>
-                            <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
-                        </div>
+                        <div className="sub2 flex h-2/4 items-center justify-center">Computer Network and Protocols</div>
                     </Link>
                 </div>
             </div>
