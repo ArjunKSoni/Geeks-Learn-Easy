@@ -64,10 +64,13 @@ ul li:hover .effecth {
   display: flex;
   overflow: hidden;
 }
+.contentSidebar {
+  display: none;
+}
 }
 /* **************************nav****************** */
 .sideDec {
-  width: 250px;
+  width: 200px;
   height: 89.8vh;
 }
 
@@ -175,14 +178,11 @@ ul li:hover .effecth {
     padding: 1rem;
   }
 }
-
 @media (max-width:450px) {
   .box2 {
     display: block;
   }
-                                .contentSidebar {
-                                  display: none;
-                                }
+
 }
 
 /* page 2 */

@@ -6,8 +6,8 @@ import Subcontext from '../context/subContext';
 export default function Body() {
     const { sub } = useContext(Subcontext)
     return (
-        <div className=' p-3 no-scrollbar text-white body overflow-x-auto flex flex-1'>
-            <div className='break-words w-3/4 p-3 pl-5'>
+        <div className=' p-3 no-scrollbar text-white justify-center body overflow-x-auto flex flex-1'>
+            <div className='break-words w-3/4 p-3 px-5'>
                 {/* heading */}
                 <div className='text-3xl font-bold pb-3 border-slate-500 border-b-4 break-words'> Heading </div>
 
