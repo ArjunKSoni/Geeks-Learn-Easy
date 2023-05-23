@@ -106,3 +106,85 @@ ul li:hover .effecth {
   flex-direction: column;
 
 }
+/* page1  */
+
+.body2 {
+  background-color: rgb(12, 12, 12);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.para2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  background-color: #3B3838;
+}
+
+.box2 {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background: linear-gradient(to bottom, rgb(61, 240, 91) 50%, rgb(51, 48, 48) 50%); */
+  overflow: hidden;
+  background-color: rgb(23, 22, 22);
+  width: 300px;
+  height: 150px;
+}
+
+.box2:hover {
+  transform: scale(1.1);
+}
+
+
+@media (min-width:450px) {
+  .box2 {
+    display: block;
+    width: 300px;
+    height: 150px;
+    font-size: 1.1rem;
+    margin: 1rem 4rem 1rem 3rem;
+  }
+
+  .container2 {
+    width: 70%;
+  }
+
+  .sub2 {
+    padding: 1rem;
+  }
+}
+
+@media (max-width:450px) {
+  .box2 {
+    display: block;
+  }
+}
+
+/* page 2 */
+
+.img1 {
+  position: relative;
+  align-items: center;
+  text-align: center;
+}

@@ -75,8 +75,8 @@ function Navbar() {
                     </div>
                 </div>
                 <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center mr-10'>
-                    <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
-                    <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
+                    <Link to={"/"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
+                    <Link to={"/"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
                 <div className="text5 z-10  overflow-hidden"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} />
                     <div className="bg-gray-900 h-fit sidebar2 text-white p-4 absolute">

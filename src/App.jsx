@@ -16,6 +16,7 @@ import SubState from "./context/subState";
 import AddContent from "./components/addContent";
 import Authstate from "./context/authState";
 import EditCourses from "./components/editCourses";
+import Subject from "./components/subject";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/profileEdit' element={<ProfileEdit />} />
             <Route exact path='/' element={<Home />} />
+            <Route exact path='/subject' element={<Subject />} />
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />
       </Routes>
