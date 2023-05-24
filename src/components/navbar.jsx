@@ -5,10 +5,7 @@ import Subcontext from "../context/subContext";
 
 function Navbar() {
     const { sub, setsub } = useContext(Subcontext)
-    // const useLinkClickHandler = (e) => {
-    //     setsub(e.target.value)
-    //     console.log(e.target.value)
-    // }
+    const subj = ["DBMS", "CNP", "Oops", "Sensor Technology", "Technical english"]
 
     return (
         <div>
