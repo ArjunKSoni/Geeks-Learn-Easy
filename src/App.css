@@ -179,16 +179,21 @@ ul li:hover .effecth {
   .container2 {
     width: 70%;
   }
-
+        .myNotesWidth {
+          width: 700px;
+        }
   .sub2 {
     padding: 1rem;
   }
 }
+
 @media (max-width:450px) {
   .box2 {
     display: block;
   }
-
+    .myNotesWidth {
+      width: 300px;
+    }
 }
 
 /* page 2 */

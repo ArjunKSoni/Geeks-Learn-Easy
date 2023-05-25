@@ -17,14 +17,17 @@ import AddContent from "./components/addContent";
 import Authstate from "./context/authState";
 import EditCourses from "./components/editCourses";
 import Subject from "./components/subject";
-import Notes from "./components/notes";
 import Article from "./components/articles";
+import MyNotes from "./components/myNotes";
+import AddOrEditNotes from "./extraGenerator/AddOrEditNotes";
+import NoteState from "./context/noteState";
 
 function App() {
   return (
     <Router>
       <Authstate>
         <SubState>
+          <NoteState>
           <Navbar />
       <Routes>
             <Route exact path={`/content`} element={<Content />} />
@@ -32,13 +35,15 @@ function App() {
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/profileEdit' element={<ProfileEdit />} />
             <Route exact path='/' element={<Home />} />
-            <Route exact path='/notes' element={<Notes />} />
+              <Route exact path='/addOrEditNotes' element={<AddOrEditNotes />} />
+              <Route exact path='/mynotes' element={<MyNotes />} />
             <Route exact path='/articles' element={<Article />} />
             <Route exact path='/subject' element={<Subject />} />
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />
       </Routes>
       <Footer />
+          </NoteState>
         </SubState>
       </Authstate>
     </Router>
