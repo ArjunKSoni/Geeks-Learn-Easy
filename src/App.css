@@ -67,13 +67,10 @@ ul li:hover .effecth {
 .contentSidebar {
   display: none;
 }
-.widthbody {
-  width: 100%;
-}
 }
 
 .widthbody {
-  width: 75%;
+  width: 100%;
 }
 /* **************************nav****************** */
 .sideDec {
@@ -176,7 +173,9 @@ ul li:hover .effecth {
     font-size: 1.1rem;
     margin: 1rem 4rem 1rem 3rem;
   }
-
+    .widthbody {
+      width: 75%;
+    }
   .container2 {
     width: 70%;
   }
