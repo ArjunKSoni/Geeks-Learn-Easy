@@ -305,7 +305,8 @@ ul li:hover .effecth {
 
 .form6 {
   width: 350px;
-  height: 450px;
+  min-height: 450px;
+    padding-bottom: 10px;
   background-color: rgba(41, 39, 39, 0.5);
   /* background-color: #00000070; */
   box-shadow: 0 20px 30px black;
@@ -338,7 +339,23 @@ ul li:hover .effecth {
   background-color: transparent;
   color: white;
 }
+#subject {
+  border: none;
+  width: 60%;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: -34px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
 
+option {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
 input:focus {
   outline: none !important;
   border-bottom: 2px solid rgb(91, 243, 131);
