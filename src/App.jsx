@@ -21,6 +21,7 @@ import MyNotes from "./components/myNotes";
 import AddOrEditNotes from "./extraGenerator/AddOrEditNotes";
 import NoteState from "./context/noteState";
 import News from "./components/news";
+import Login from "./components/login";
 
 function App() {
   return (
@@ -34,10 +35,11 @@ function App() {
           <Route exact path='/about' element={<About />} />
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/profileEdit' element={<ProfileEdit />} />
-            <Route exact path='/' element={<Home />} />
+              <Route exact path='/home' element={<Home />} />
               <Route exact path='/addOrEditNotes' element={<AddOrEditNotes />} />
               <Route exact path='/mynotes' element={<MyNotes />} />
               <Route exact path='/news' element={<News />} />
+              <Route exact path='/' element={<Login />} />
             <Route exact path='/subject' element={<Subject />} />
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />
