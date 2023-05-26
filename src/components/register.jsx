@@ -11,21 +11,25 @@ export default function Register() {
 
     return (
         <div className='home h-screen bodyregister text-white'>
-            <div class="container6">
-                <div class="form6">
-                    <div class="btn6">
-                        <button class="loginBtn6">Just few things more...</button>
+            <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap w-screen justify-center mr-10'>
+                <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
+                <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
+            </div>
+            <div className="container6">
+                <div className="form6">
+                    <div className="btn6">
+                        <button className="loginBtn6">Just few things more...</button>
                     </div>
-                    <form class="login6" action="" method="get">
+                    <form className="login6" action="" method="get">
 
-                        <div class="formGroup6">
-                            <input type="number" placeholder="Year" name="email" required autocomplete="off" />
+                        <div className="formGroup6">
+                            <input type="number" placeholder="Year" name="email" required autoComplete="off" />
                         </div>
-                        <div class="formGroup6">
-                            <input type="text" id="confirmPassword6" placeholder="Branch" min="10" required autocomplete="off" />
+                        <div className="formGroup6">
+                            <input type="text" id="confirmPassword6" placeholder="Branch" min="10" required autoComplete="off" />
                         </div>
-                        <div class="formGroup6">
-                            {/* <input type="text" id="password6" placeholder="Subjects" required autocomplete="off" /> */}
+                        <div className="formGroup6">
+                            {/* <input type="text" id="password6" placeholder="Subjects" required autoComplete="off" /> */}
                             <select name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
                                 <option disabled hidden >Select Subject</option>
                                 <option value="DBMS">DBMS</option>
@@ -40,8 +44,8 @@ export default function Register() {
                                 return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setsub(subj.filter(u => u != k.target.value)) }}>{e}</button>
                             })}
                         </div>
-                        <div class="formGroup6">
-                            <button onClick={(e) => { e.preventDefault(); navigate("/home") }} type="submit" class="btn26">SUBMIT</button>
+                        <div className="formGroup6">
+                            <button onClick={(e) => { e.preventDefault(); navigate("/home") }} type="submit" className="btn26">SUBMIT</button>
                         </div>
                     </form>
                 </div>

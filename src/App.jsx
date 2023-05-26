@@ -24,6 +24,7 @@ import News from "./components/news";
 import Login from "./components/login";
 import Signup from "./components/signup";
 import Register from "./components/register";
+import Maybeshow from "./extraGenerator/maybeshow";
 
 function App() {
   return (
@@ -31,7 +32,9 @@ function App() {
       <Authstate>
         <SubState>
           <NoteState>
+            <Maybeshow>
           <Navbar />
+            </Maybeshow>
       <Routes>
             <Route exact path={`/content`} element={<Content />} />
           <Route exact path='/about' element={<About />} />
@@ -48,7 +51,9 @@ function App() {
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />
       </Routes>
+            <Maybeshow>
       <Footer />
+            </Maybeshow>
           </NoteState>
         </SubState>
       </Authstate>
