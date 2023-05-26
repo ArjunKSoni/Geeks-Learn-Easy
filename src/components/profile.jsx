@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaHome } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Profile() {
+    const navigate = useNavigate();
     return (
         <div className='home h-screen overflow-scroll no-scrollbar text-white'>
             <Link to={"/home"}><div className='absolute transition-all text-black text-3xl top-4 left-4 rounded-full p-3 hover:bg-white'><FaHome /></div></Link>
@@ -14,7 +15,7 @@ export default function Profile() {
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
                         <button className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
-                        <button className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
+                        <button onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>
                 <div className="right3">
