@@ -62,8 +62,8 @@ function Navbar() {
                     </div>
                 </div>
                 <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center mr-10'>
-                    <Link to={"/"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
-                    <Link to={"/"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
+                    <Link to={"/home"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
+                    <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
                 <Link to={"/profile"}><div className="text5 z-10  overflow-hidden"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} /></div></Link>
             </div>
