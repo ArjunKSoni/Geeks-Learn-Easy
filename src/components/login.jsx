@@ -9,7 +9,7 @@ export default function Login() {
 
     return (
         <div className='home min-h-screen bodyregister text-white '>
-            <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap w-screen justify-center mr-10'>
+            <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap justify-center mr-10'>
                 <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
                 <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
             </div>
