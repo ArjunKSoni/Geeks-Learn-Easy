@@ -1,8 +1,11 @@
 import React from 'react'
+import { FaHome } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export default function Profile() {
     return (
         <div className='home h-screen overflow-scroll no-scrollbar text-white'>
+            <Link to={"/home"}><div className='absolute transition-all text-black text-3xl top-4 left-4 rounded-full p-3 hover:bg-white'><FaHome /></div></Link>
             <div className="wrapper3">
                 <div className="left3">
                     <img src="profile.png" alt="user" width="100" />
