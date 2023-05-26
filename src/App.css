@@ -409,3 +409,130 @@ input:focus {
 .login6 .checkBox6 {
   margin-top: 30px !important;
 }
+/* ********************************************************************* */
+
+.body3 {
+  background-color: #f3f3f3;
+}
+
+.wrapper3 {
+  width: 100%;
+  display: flex;
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, .08);
+}
+
+.wrapper3 .left3 {
+  width: 35%;
+  height: 100vh;
+  background: linear-gradient(to right, #01dbdf, #07696b);
+  padding: 30px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.wrapper3 .left3 img {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 30vh;
+  width: 15vw;
+}
+
+.wrapper3 .left3 h4 {
+  margin-bottom: 10px;
+}
+
+.wrapper3 .left3 p {
+  font-size: 12px;
+}
+
+.wrapper3 .right3 {
+  width: 65%;
+  height: 100vh;
+  background: #092525;
+  padding: 30px 25px;
+}
+
+.wrapper3 .right3 .info {
+  top: 1rem;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.wrapper3 .right3 .projects3 {
+  top: 1rem;
+  position: relative;
+  margin-bottom: 2px;
+}
+
+.wrapper3 .right3 .info3 h3,
+.wrapper3 .right3 .projects3 h3 {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #f7f7f8;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.wrapper3 .right3 .info_data3,
+.wrapper3 .right3 .projects_data3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper3 .right3 .info_data3 .data3,
+.wrapper3 .right3 .projects_data3 .data3 {
+  width: 45%;
+}
+
+.wrapper3 .right3 .info_data3 .data3 h4,
+.wrapper3 .right3 .projects_data3 .data3 h4 {
+  color: #828897;
+  margin-bottom: 5px;
+}
+
+.wrapper3 .right3 .info_data3 .data3 p,
+.wrapper3 .right3 .projects_data3 .data3 p {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #e8eff5;
+}
+
+.wrapper3 .social_media3 ul li a {
+  display: flex;
+  color: #fff;
+  display: block;
+  font-size: 18px;
+}
+
+.wrapper3 .social_media3 ul li a img {
+  display: flex;
+  width: fit-content;
+  height: 6vh;
+}
+
+@media (max-width:450px) {
+  .wrapper3 {
+    display: grid;
+  }
+
+  .wrapper3 .left3 {
+    height: fit-content;
+    width: 100%;
+    /* background: linear-gradient(to bottom, #01dbdf, #07696b); */
+  }
+
+  .wrapper3 .right3 {
+    height: fit-content;
+    width: 100%;
+  }
+
+  .wrapper3 .left3 img {
+    height: 20vh;
+    width: 30vw;
+  }
+}

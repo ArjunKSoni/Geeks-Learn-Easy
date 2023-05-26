@@ -5,7 +5,7 @@ export default function Maybeshow({ children }) {
     const [shownav, setNav] = useState(false);
     const location = useLocation();
     useEffect(() => {
-        if (location.pathname === "/" || location.pathname === "/register" || location.pathname === "/signup") {
+        if (location.pathname === "/" || location.pathname === "/register" || location.pathname === "/signup" || location.pathname === "/profile") {
             setNav(false)
         } else {
             setNav(true)

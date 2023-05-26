@@ -12,19 +12,19 @@ export default function Home() {
                     <h1><spam className="font-bold"> Subject Name</spam></h1>
                 </div>
                 <div className="container2">
-                    <Link to="/content" className="box2 m-4">
+                    <Link to="/pdfread" className="box2 m-4">
                             <div style={{ backgroundColor: colour[0] }} className="title2 text-2xl font-bold h-2/4 flex items-center justify-between px-7">Notes <img src="notes.webp" alt="notes" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all notes at one place topicwise</div>
                     </Link>
-                    <Link to="/content" className="box2 m-4">
+                    <Link to="/pdfread" className="box2 m-4">
                             <div style={{ backgroundColor: colour[3] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">PYQ <img src="pyq2.webp" alt="pyq" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all the previous year questions at one place</div>
                     </Link>
-                    <Link to="/content" className="box2 m-4">
+                    <Link to="/pdfread" className="box2 m-4">
                             <div style={{ backgroundColor: colour[2] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Important Questions <img src="ques1.png" alt="Ques" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all the important questions at one place</div>
                     </Link>
-                    <Link to="/content" className="box2 m-4">
+                    <Link to="/pdfread" className="box2 m-4">
                             <div style={{ backgroundColor: colour[5] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Assignments <img src="assignment.png" alt="note" width="90rem" height="90rem" /></div>
                         <div className="sub2 text-center flex h-2/4 items-center justify-center">Get all the Assignments at one place</div>
                     </Link>
