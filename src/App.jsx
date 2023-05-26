@@ -17,10 +17,10 @@ import AddContent from "./components/addContent";
 import Authstate from "./context/authState";
 import EditCourses from "./components/editCourses";
 import Subject from "./components/subject";
-import Article from "./components/articles";
 import MyNotes from "./components/myNotes";
 import AddOrEditNotes from "./extraGenerator/AddOrEditNotes";
 import NoteState from "./context/noteState";
+import News from "./components/news";
 
 function App() {
   return (
@@ -37,7 +37,7 @@ function App() {
             <Route exact path='/' element={<Home />} />
               <Route exact path='/addOrEditNotes' element={<AddOrEditNotes />} />
               <Route exact path='/mynotes' element={<MyNotes />} />
-            <Route exact path='/articles' element={<Article />} />
+              <Route exact path='/news' element={<News />} />
             <Route exact path='/subject' element={<Subject />} />
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />

@@ -36,7 +36,7 @@ function Navbar() {
                             </div>
                         </li> */}
                         <Link to={"/mynotes"}><li className="hover:cursor-pointer"><div className='text-white flex py-2  gap-1 items-center justify-center font-bold'>My Notes</div></li></Link>
-                        <Link to={"/articles"}><li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>News</div></li></Link>
+                        <Link to={"/news"}><li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>News</div></li></Link>
                     </ul>
                 </div>
 
@@ -46,17 +46,7 @@ function Navbar() {
                 </div>
 
                 <div className='flex mr-6 gap-4 flex-1 justify-end'>
-                    <div className="user"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} />
-                        <div className={`text-white absolute disnone right-5`}>
-                            <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                            <ul className="bg-gray-800">
-                                <Link to={"/profile"}><li className="p-1 px-2 hover:bg-gray-700">My Profile</li></Link>
-                                <Link to={"/editcourses"}><li className="p-1 px-2 hover:bg-gray-700">My Courses</li></Link>
-                                <Link to={"/profileEdit"}><li className="p-1 px-2 hover:bg-gray-700">Edit Profile</li></Link>
-                                <li className="p-1 px-2 hover:bg-gray-700">Logout</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <Link to={"/profile"}><div className="user"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} /></div></Link>
                 </div>
             </div >
             {/* *********************************************************************************************************** */}
@@ -67,7 +57,7 @@ function Navbar() {
                         <ul className="bg-gray-900">
                             <Link to={"/content"}><li className="p-1 px-5 my-3 hover:bg-gray-700">GLE Notes</li></Link>
                             <Link to={"/mynotes"}><li className="p-1 px-5 my-3 hover:bg-gray-700">My Notes</li></Link>
-                            <Link to={"/articles"}><li className="p-1 px-5 my-3 hover:bg-gray-700">News</li></Link>
+                            <Link to={"/news"}><li className="p-1 px-5 my-3 hover:bg-gray-700">News</li></Link>
                         </ul>
                     </div>
                 </div>
@@ -75,17 +65,7 @@ function Navbar() {
                     <Link to={"/"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
                     <Link to={"/"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
-                <div className="text5 z-10  overflow-hidden"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} />
-                    <div className="bg-gray-900 h-fit sidebar2 text-white p-4 absolute">
-                        <div className="w-full h-1 bg-green-500"></div>
-                        <ul className="bg-gray-900">
-                            <Link to={"/profile"}><li className=" p-1 px-5 my-3 hover:bg-gray-700">My Profile</li></Link>
-                            <Link to={"/editcourses"}><li className=" p-1 px-5 my-3 hover:bg-gray-700">My Courses</li></Link>
-                            <Link to={"/profileEdit"}><li className="p-1 px-5 my-3 hover:bg-gray-700">Edit Profile</li></Link>
-                            <li className="p-1 px-5 my-3 hover:bg-gray-700">Logout</li>
-                        </ul>
-                    </div>
-                </div>
+                <Link to={"/profile"}><div className="text5 z-10  overflow-hidden"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} /></div></Link>
             </div>
         </div >
     )

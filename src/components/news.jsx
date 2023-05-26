@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Article() {
+export default function News() {
     return (
         <div className='home min-h-screen text-white'>
-            Article
+            News
         </div>
     )
 }

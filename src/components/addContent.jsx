@@ -1,7 +1,7 @@
 import React, { useState, useRef, useMemo } from 'react'
 import JoditEditor from 'jodit-react';
 // import { RxCross2 } from "react-icons/rx";
-// jodit react is the reach text editor 
+// jodit react is the rich text editor 
 import HTMLReactParser from 'html-react-parser';
 
 export default function AddContent() {
