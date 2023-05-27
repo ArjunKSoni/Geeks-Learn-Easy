@@ -150,8 +150,9 @@ ul li:hover .effecth {
 }
 
 .box2 {
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
+  box-shadow: 0px 0px 15px 4px black;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
@@ -291,7 +292,6 @@ ul li:hover .effecth {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url('../public/signin.jpg');
   background-size: cover;
-  /* background-attachment: fixed; */
 }
 
 /* align items center vertically and horizontally  */
@@ -302,13 +302,27 @@ ul li:hover .effecth {
   align-items: center !important;
   height: 100vh;
 }
+.editcontainer {
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  height: 100%;
+}
 
 .form6 {
   width: 350px;
   min-height: 450px;
-    /* padding-bottom: 10px; */
   background-color: rgba(41, 39, 39, 0.5);
-  /* background-color: #00000070; */
+  box-shadow: 0 20px 30px black;
+  }
+  
+  .editform {
+    width: 350px;
+    transition: all 0.3s;
+    border: 20px;
+    height: fit-content;
+    background-color: rgb(48, 48, 48);
   box-shadow: 0 20px 30px black;
 }
 

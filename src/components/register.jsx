@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Subcontext from '../context/subContext'
 
 export default function Register() {
     const navigate = useNavigate()
-    const [subj, setsub] = useState([])
+    const { subj, setsub } = useContext(Subcontext)
     const changed = (e) => {
         if (!subj.includes(e.target.value))
             setsub(subj.concat(e.target.value))
@@ -35,8 +36,8 @@ export default function Register() {
                                 <option value="DBMS">DBMS</option>
                                 <option value="CNP">CNP</option>
                                 <option value="Oops">Oops</option>
-                                <option value="Sensor Technology">Sensor Technology</option>
-                                <option value="Tehnical English">Tehnical English</option>
+                                <option value="Sensor_Technology">Sensor Technology</option>
+                                <option value="Technical_English">Technical English</option>
                             </select>
                         </div>
                         <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>

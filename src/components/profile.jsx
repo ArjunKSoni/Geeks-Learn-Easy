@@ -2,13 +2,18 @@ import React, { useContext } from 'react'
 import { FaHome } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import Authcontext from '../context/authContext';
+import Subcontext from '../context/subContext';
+import EditCourses from './editCourses';
 
 export default function Profile() {
     const {profile} = useContext(Authcontext);
+    const { hide, sethide } = useContext(Subcontext);
 
     const navigate = useNavigate();
+
     return (
         <div className='home h-screen overflow-scroll no-scrollbar text-white'>
+            {hide && <EditCourses />}
             <Link to={"/home"}><div className='absolute transition-all text-black text-3xl top-4 left-4 rounded-full p-3 bg-white'><FaHome /></div></Link>
             <div className="wrapper3">
                 <div className="left3">
@@ -17,7 +22,7 @@ export default function Profile() {
                     <p className='font-bold text-gray-300 text-xl'>{profile.clg}</p>
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
-                        <button className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
+                        <button onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
                         <button onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>

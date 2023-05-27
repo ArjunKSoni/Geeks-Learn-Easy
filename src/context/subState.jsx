@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import Subcontext from "./subContext"
 
 const SubState = (props) => {
-    const [sub, setsub] = useState("Null")
+    const [subj, setsub] = useState([])
+    const [hide, sethide] = useState([true]);
 
     return (
-        <Subcontext.Provider value={{ sub, setsub }}>
+        <Subcontext.Provider value={{ subj, setsub, sethide, hide }}>
             {props.children}
         </Subcontext.Provider>
     )
