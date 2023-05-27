@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaHome } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import Authcontext from '../context/authContext';
 
 export default function Profile() {
+    const {profile} = useContext(Authcontext);
+
     const navigate = useNavigate();
     return (
         <div className='home h-screen overflow-scroll no-scrollbar text-white'>
-            <Link to={"/home"}><div className='absolute transition-all text-black text-3xl top-4 left-4 rounded-full p-3 hover:bg-white'><FaHome /></div></Link>
+            <Link to={"/home"}><div className='absolute transition-all text-black text-3xl top-4 left-4 rounded-full p-3 bg-white'><FaHome /></div></Link>
             <div className="wrapper3">
                 <div className="left3">
                     <img src="profile.png" alt="user" width="100" />
-                    <h4 className='text-3xl font-bold'>User Name</h4>
-                    <p className='font-bold text-gray-300 text-xl'>Madhav Institute of Technology and Science</p>
+                    <h4 className='text-3xl font-bold'>{profile.name}</h4>
+                    <p className='font-bold text-gray-300 text-xl'>{profile.clg}</p>
                     <div className="flex items-center justify-around gap-3 mt-4">
-                        <button className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
+                        <button onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
                         <button className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
                         <button onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
@@ -24,11 +27,11 @@ export default function Profile() {
                         <div className="info_data3">
                             <div className="data3">
                                 <h4>Email</h4>
-                                <p>random@email.com</p>
+                                <p>{profile.email}</p>
                             </div>
                             <div className="data3">
                                 <h4>Phone</h4>
-                                <p>+91 123456789</p>
+                                <p>{profile.Mobile}</p>
 
                             </div>
                         </div>
@@ -38,13 +41,13 @@ export default function Profile() {
                             <div className="projects_data3">
                                 <div className="data3">
                                     <h4>Branch</h4>
-                                    <p>ITAIR</p>
+                                    <p>{profile.branch}</p>
                                     <h4>Courses</h4>
                                     <p>DBMS,CNP</p>
                                 </div>
                                 <div className="data3">
                                     <h4>Year</h4>
-                                    <p>3rd</p>
+                                    <p>{profile.year}</p>
                                 </div>
                             </div>
                         </div>
@@ -53,11 +56,11 @@ export default function Profile() {
                             <div className="projects_data3">
                                 <div className="data3">
                                     <h4>Linkedin</h4>
-                                    <p>user.linkedin.com</p>
+                                    <p>{profile.Linkedin}</p>
                                 </div>
                                 <div className="data3">
                                     <h4>Git hub</h4>
-                                    <p>user.Github.com</p>
+                                    <p>{profile.github}</p>
                                 </div>
                             </div>
                         </div>

@@ -4,6 +4,19 @@ import Authcontext from "./authContext"
 const Authstate = (props) => {
     const [token, setToken] = useState()
     const [user, setUser] = useState()
+
+    const [profile, setProfile] = useState({
+        name: "user",
+        clg: "xyz",
+        email: "xyz@yzx.com",
+        Mobile: "12345",
+        branch: "IT",
+        year: "2",
+        Linkedin: "xyz.linked.com",
+        github: "xyz.github.com",
+    })
+
+
     const register = async (reg) => {
         const apicall = await fetch(`###`, {
             method: 'POST',
@@ -34,7 +47,7 @@ const Authstate = (props) => {
     }
 
     return (
-        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser }}>
+        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser, profile, setProfile }}>
             {props.children}
         </Authcontext.Provider>
     )

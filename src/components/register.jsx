@@ -41,7 +41,7 @@ export default function Register() {
                         </div>
                         <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>
                             {subj.map((e, i) => {
-                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setsub(subj.filter(u => u != k.target.value)) }}>{e}</button>
+                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setsub(subj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
                         </div>
                         <div className="formGroup6">

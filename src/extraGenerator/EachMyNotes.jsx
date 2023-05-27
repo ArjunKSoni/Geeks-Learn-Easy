@@ -15,8 +15,8 @@ export default function EachMyNotes(props) {
             <div className='bg-gray-700 text-xl font-bold myNotesWidth my-4 rounded-xl flex justify-between px-3 py-1 items-center'>
                 <h2 style={{ width: "20vw" }} className=' overflow-hidden'>{note.title}</h2>
                 <div className='text-sm font-normal flex items-center gap-4'>{note.lastModified}<div className='flex gap-3 items-center p-3 justify-evenly text-2xl'>
-                    <Link to={"/addOrEditNotes"} state={{ user: { token: "1234", title: note.title, desc: note.desc, lastModified: note.lastModified }, edit: true }}><FaEdit onClick={() => editNote(myNotes.filter(u => u.title != note.title && u.desc != note.desc))} /> </Link>
-                    <AiFillDelete className='hover:cursor-pointer' onClick={() => editNote(myNotes.filter(u => u.title != note.title && u.desc != note.desc))} /></div></div>
+                    <Link to={"/addOrEditNotes"} state={{ user: { token: "1234", title: note.title, desc: note.desc, lastModified: note.lastModified }, edit: true }}><FaEdit onClick={() => editNote(myNotes.filter(u => u.title !== note.title && u.desc !== note.desc))} /> </Link>
+                    <AiFillDelete className='hover:cursor-pointer' onClick={() => editNote(myNotes.filter(u => u.title !== note.title && u.desc !== note.desc))} /></div></div>
             </div>
         </div>
     )

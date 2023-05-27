@@ -27,7 +27,7 @@ export default function Login() {
                             <input type="password" onChange={(e) => { setpass(e.target.value) }} id="password6" name='password' placeholder="Password" required autocomplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <button type="submit" onClick={(e) => { e.preventDefault(); (email == "gle@gle.com" && pass == "gle") ? navigate("/home") : alert("Incorrect Credentials") }} className="btn26">LOG IN</button>
+                            <button type="submit" onClick={(e) => { e.preventDefault(); (email === "gle@gle.com" && pass === "gle") ? navigate("/home") : alert("Incorrect Credentials") }} className="btn26">LOG IN</button>
                         </div>
                         <div className="checkBox6">
                             <div className="text6" id="checkbox6">New member? <Link to={"/signup"} style={{ color: "rgb(134, 230, 209)" }}>Sign up</Link></div>
