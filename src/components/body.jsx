@@ -9,7 +9,7 @@ export default function Body() {
     const { theme } = useContext(Authcontext);
     const { sub } = useContext(Subcontext)
     return (
-        <div style={Theme[0].textbg} className=' p-3 no-scrollba justify-center body overflow-x-auto flex'>
+        <div style={Theme[theme].textbgw} className=' p-3 no-scrollba justify-center body overflow-x-auto flex'>
             <div className='break-words widthbody p-3 px-5'>
                 {/* heading */}
                 <div className='text-3xl font-bold pb-3 border-slate-500 border-b-4 break-words'> Heading </div>

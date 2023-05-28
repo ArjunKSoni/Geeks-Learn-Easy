@@ -8,37 +8,37 @@ function Content() {
 
     return (
         <div className="flex ">
-            <div style={Theme[theme].sidedesc} className="contentSidebar p-3  sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div style={Theme[theme].bodydesc} className="contentSidebar p-3  sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {/* <div className=" rotate-180 w-full -mt-3 h-1 bg-green-500"></div> */}
-                <ul style={Theme[theme].body}> <h1 className={`p-1 px-2 text-xl font-bold hover:${Theme[theme].descHover}`}>Topic 1</h1>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 2</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 1</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 3</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 4</li>
+                <ul style={Theme[theme].bodydesc}> <h1 className={`p-1 px-2 text-xl ${Theme[theme].textclass} rounded-xl font-bold hover:text-white  hover:${Theme[theme].newdescHover}`}>Topic 1</h1>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 2</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 1</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 3</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
-                <ul style={Theme[theme].body}> <h1 className={`p-1 px-2 text-xl font-bold hover:${Theme[theme].descHover}`}>Topic 2</h1>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 1</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 2</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 3</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 4</li>
+                <ul style={Theme[theme].bodydesc}> <h1 className={`p-1 px-2 text-xl ${Theme[theme].textclass} rounded-xl font-bold hover:text-white hover:${Theme[theme].newdescHover}`}>Topic 2</h1>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 1</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 2</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 3</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
-                <ul style={Theme[theme].body}> <h1 className={`p-1 px-2 text-xl font-bold hover:${Theme[theme].descHover}`}>Topic 3</h1>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 1</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 2</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 3</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 4</li>
+                <ul style={Theme[theme].bodydesc}> <h1 className={`p-1 px-2 text-xl ${Theme[theme].textclass} rounded-xl font-bold hover:text-white hover:${Theme[theme].newdescHover}`}>Topic 3</h1>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 1</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 2</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 3</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
-                <ul style={Theme[theme].body}> <h1 className={`p-1 px-2 text-xl font-bold hover:${Theme[theme].descHover}`}>Topic 4</h1>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 1</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 2</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 3</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 4</li>
+                <ul style={Theme[theme].bodydesc}> <h1 className={`p-1 px-2 text-xl ${Theme[theme].textclass} rounded-xl font-bold hover:text-white hover:${Theme[theme].newdescHover}`}>Topic 4</h1>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 1</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 2</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 3</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
-                <ul style={Theme[theme].body}> <h1 className={`p-1 px-2 text-xl font-bold hover:${Theme[theme].descHover}`}>Topic 5</h1>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 1</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 2</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 3</li>
-                    <li className={` ml-3 p-1 px-2 text-gray-400 hover:${Theme[theme].descHover}`}>sub topic 4</li>
+                <ul style={Theme[theme].bodydesc}> <h1 className={`p-1 px-2 text-xl ${Theme[theme].textclass} rounded-xl font-bold hover:text-white hover:${Theme[theme].newdescHover}`}>Topic 5</h1>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 1</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 2</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 3</li>
+                    <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
             </div>
             <Body />

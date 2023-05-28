@@ -18,17 +18,17 @@ export default function Profile() {
             {hide && <EditCourses />}
             <Link to={"/home"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><FaHome /></div></Link>
             <div className="wrapper3">
-                <div style={Theme[theme].body} className="left3">
+                <div style={Theme[theme].profile} className="left3">
                     <img src="profile.png" alt="user" width="100" />
                     <h4 className='text-3xl font-bold'>{profile.name}</h4>
-                    <p className='font-bold text-gray-300 text-xl'>{profile.clg}</p>
+                    <p className='font-bold text-gray-500 text-xl'>{profile.clg}</p>
                     <div className="flex items-center justify-around gap-3 mt-4">
-                        <button onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
-                        <button onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
-                        <button onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>
-                <div style={Theme[theme].homeCont} className="right3">
+                <div style={Theme[theme].profilEeditBg} className="right3">
                     <div className="info3">
                         <h3 className='font-bold text-xl'>Information</h3>
                         <div className="info_data3">
