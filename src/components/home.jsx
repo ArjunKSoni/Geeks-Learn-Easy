@@ -19,7 +19,7 @@ export default function Home() {
                     <p>What would you like to learn today?</p>
                 </div>
                 <div className="container2">
-                    {subj.length === 0 && <div className='flex items-center justify-center' style={{ height: "50vh" }}>Go to profile to add subjects</div>}
+                    {subj.length === 0 && <div className='flex p-16 items-center justify-center' style={{ height: "50vh" }}>Go to profile to add subjects</div>}
                     {subj.map((e, i) => {
                         return <HomeSubject colour={colour[i % 10]} name={e} desc={desc[e]} />
                     })}
