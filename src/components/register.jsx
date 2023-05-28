@@ -1,13 +1,17 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 
 export default function Register() {
     const navigate = useNavigate()
     const { subj, setsub } = useContext(Subcontext)
+    const [newsubj, setnewSubj] = useState([])
+    useEffect(() => {
+        setnewSubj(subj)
+    }, [])
     const changed = (e) => {
-        if (!subj.includes(e.target.value))
-            setsub(subj.concat(e.target.value))
+        if (!newsubj.includes(e.target.value))
+            setnewSubj(newsubj.concat(e.target.value))
     }
 
     return (
@@ -41,12 +45,12 @@ export default function Register() {
                             </select>
                         </div>
                         <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>
-                            {subj.map((e, i) => {
-                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setsub(subj.filter(u => u !== k.target.value)) }}>{e}</button>
+                            {newsubj.map((e, i) => {
+                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setnewSubj(newsubj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
                         </div>
                         <div className="formGroup6">
-                            <button onClick={(e) => { e.preventDefault(); navigate("/home") }} type="submit" className="btn26">SUBMIT</button>
+                            <button onClick={(e) => { e.preventDefault(); setsub(newsubj); navigate("/home") }} type="submit" className="btn26">SUBMIT</button>
                         </div>
                     </form>
                 </div>

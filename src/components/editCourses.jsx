@@ -1,12 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Subcontext from '../context/subContext'
 import { useNavigate } from 'react-router-dom'
 
 export default function EditCourses() {
     const navigate = useNavigate();
     const { subj, setsub, sethide } = useContext(Subcontext)
-    const [newsubj, setnewSubj] = useState(subj)
-
+    const [newsubj, setnewSubj] = useState([])
+    useEffect(() => {
+        setnewSubj(subj)
+    }, [])
     const changed = (e) => {
         if (!newsubj.includes(e.target.value))
             setnewSubj(newsubj.concat(e.target.value))
@@ -29,11 +31,11 @@ export default function EditCourses() {
                         </div>
                         <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>
                             {newsubj.map((e, i) => {
-                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setsub(subj.filter(u => u !== k.target.value)) }}>{e}</button>
+                                return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setnewSubj(newsubj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
                         </div>
                         <button onClick={(e) => { e.preventDefault(); setsub(newsubj); sethide(false) }} className='px-2 py-1 rounded bg-white text-black' id="edit-course3">Save changes</button>
-                        <button onClick={(e) => { e.preventDefault(); navigate("/profile"); sethide(false) }} className='px-2 py-1 my-2 rounded bg-white text-black' id="log-out3">Cancel</button>
+                        <button onClick={(e) => { e.preventDefault(); sethide(false) }} className='px-2 py-1 my-2 rounded bg-white text-black' id="log-out3">Cancel</button>
                     </div>
                 </div>
             </div>
