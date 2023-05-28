@@ -2,11 +2,14 @@ import React, { useContext } from 'react'
 import { ImRadioChecked2 } from "react-icons/im";
 import Add from './add';
 import Subcontext from '../context/subContext';
+import Theme from '../extraGenerator/theme';
+import Authcontext from '../context/authContext';
 
 export default function Body() {
+    const { theme } = useContext(Authcontext);
     const { sub } = useContext(Subcontext)
     return (
-        <div className=' p-3 no-scrollbar text-white justify-center body overflow-x-auto flex'>
+        <div style={Theme[0].textbg} className=' p-3 no-scrollba justify-center body overflow-x-auto flex'>
             <div className='break-words widthbody p-3 px-5'>
                 {/* heading */}
                 <div className='text-3xl font-bold pb-3 border-slate-500 border-b-4 break-words'> Heading </div>

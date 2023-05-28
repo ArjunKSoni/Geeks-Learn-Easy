@@ -4,6 +4,7 @@ import Authcontext from "./authContext"
 const Authstate = (props) => {
     const [token, setToken] = useState()
     const [user, setUser] = useState()
+    const [theme, settheme] = useState(0)
 
     const [profile, setProfile] = useState({
         name: "user",
@@ -47,7 +48,7 @@ const Authstate = (props) => {
     }
 
     return (
-        <Authcontext.Provider value={{ register, token, user, login, setToken, setUser, profile, setProfile }}>
+        <Authcontext.Provider value={{ register, theme, settheme, token, user, login, setToken, setUser, profile, setProfile }}>
             {props.children}
         </Authcontext.Provider>
     )

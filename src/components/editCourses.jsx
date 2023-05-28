@@ -1,8 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Subcontext from '../context/subContext'
 import { useNavigate } from 'react-router-dom'
+import Theme from '../extraGenerator/theme';
+import Authcontext from '../context/authContext';
 
 export default function EditCourses() {
+    const { theme } = useContext(Authcontext);
     const navigate = useNavigate();
     const { subj, setsub, sethide } = useContext(Subcontext)
     const [newsubj, setnewSubj] = useState([])
@@ -15,9 +18,9 @@ export default function EditCourses() {
     }
     return (
         <div>
-            <div style={{ backgroundColor: "rgba(41, 39, 39, 0.8)" }} className='absolute  z-10  w-full h-full'>
+            <div style={Theme[theme].editCourses} className='absolute  z-10  w-full h-full'>
                 <div className='editcontainer'>
-                    <div className='editform z-20 rounded-xl flex flex-col items-center justify-center'>
+                    <div style={Theme[theme].editCourseInside} className='editform z-20 rounded-xl flex flex-col items-center justify-center'>
                         <div className="mt-10">
                             {/* <input type="text" id="password6" placeholder="Subjects" required autoComplete="off" /> */}
                             <select style={{ width: "250px" }} name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
@@ -34,8 +37,8 @@ export default function EditCourses() {
                                 return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setnewSubj(newsubj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
                         </div>
-                        <button onClick={(e) => { e.preventDefault(); setsub(newsubj); sethide(false) }} className='px-2 py-1 rounded bg-white text-black' id="edit-course3">Save changes</button>
-                        <button onClick={(e) => { e.preventDefault(); sethide(false) }} className='px-2 py-1 my-2 rounded bg-white text-black' id="log-out3">Cancel</button>
+                        <button onClick={(e) => { e.preventDefault(); setsub(newsubj); sethide(false) }} style={Theme[theme].bgtext} className='px-2 py-1 rounded ' id="edit-course3">Save changes</button>
+                        <button onClick={(e) => { e.preventDefault(); sethide(false) }} style={Theme[theme].bgtext} className='px-2 py-1 my-2 rounded' id="log-out3">Cancel</button>
                     </div>
                 </div>
             </div>

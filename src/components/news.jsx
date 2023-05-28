@@ -1,45 +1,34 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import Theme from '../extraGenerator/theme'
+import Authcontext from '../context/authContext';
+import EachNews from '../extraGenerator/eachNews';
+import { useEffect } from 'react';
 
 export default function News() {
+    const [news, setNews] = useState([])
+
+    useEffect(() => {
+        async function fetchData() {
+            const apicall = await fetch(`https://gle-news.onrender.com/news?category=education`, {
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const data = await apicall.json();
+            const parse = await data.data;
+            setNews(parse);
+        }
+        fetchData();
+    }, []);
+
+    const { theme } = useContext(Authcontext);
     return (
-        <div className='home min-h-screen flex flex-col items-center justify-start text-white'>
+        <div style={Theme[theme].textbg} className='home min-h-screen flex flex-col items-center justify-start'>
             <h1 id="news-title">Latest News</h1>
-            <div className="news-section">
-                <div className="img-left">
-                    <img src="https://picsum.photos/300/300" alt="news-image" />
-                </div>
-                <div className="news-content">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod cupiditate natus pariatur
-                        exercitationem. Voluptatibus adipisci aspernatur expedita minima debitis qui ipsum dicta excepturi
-                        voluptates magni!</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div className="news-section">
-                <div className="img-left">
-                    <img src="https://picsum.photos/300/300" alt="news-image" />
-                </div>
-                <div className="news-content">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod cupiditate natus pariatur
-                        exercitationem. Voluptatibus adipisci aspernatur expedita minima debitis qui ipsum dicta excepturi
-                        voluptates magni!</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-            <div className="news-section">
-                <div className="img-left">
-                    <img src="https://picsum.photos/300/300" alt="news-image" />
-                </div>
-                <div className="news-content">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod cupiditate natus pariatur
-                        exercitationem. Voluptatibus adipisci aspernatur expedita minima debitis qui ipsum dicta excepturi
-                        voluptates magni!</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
+            {news.map((e, i) => {
+                return <EachNews imgurl={e.imageUrl} title={e.title} desc={e.content} link={e.readMoreUrl} />
+            })}
         </div>
     )
 }

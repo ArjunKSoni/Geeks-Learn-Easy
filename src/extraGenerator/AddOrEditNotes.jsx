@@ -1,8 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Notecontext from '../context/noteContext'
+import Theme from './theme'
+import Authcontext from '../context/authContext';
 
 export default function AddOrEditNotes() {
+    const { theme } = useContext(Authcontext);
     const { myNotes, editNote } = useContext(Notecontext)
 
     const navigate = useNavigate()
@@ -23,7 +26,7 @@ export default function AddOrEditNotes() {
         navigate("/mynotes")
     }
     return (
-        <div className='home min-h-screen overflow-hidden flex items-start justify-center text-white'>
+        <div style={Theme[theme].textbg} className='min-h-screen overflow-hidden flex items-start justify-center text-white'>
             <form className='mt-10 flex items-center justify-center flex-col'>
                 <input style={{ width: "22rem" }} onChange={(e) => settitle(e.target.value)} placeholder='Title' className='bg-gray-600 mb-7 px-3 text-center text-2xl font-semibold rounded-lg' type="text" defaultValue={user.title} id='title' />
                 <div><textarea style={{ width: "22rem" }} placeholder='Notes here...' onChange={(e) => setDesc(e.target.value)} rows={10} type="text" className='mt-5 bg-gray-600 p-3 text-xl rounded-lg' defaultValue={user.desc} /></div>

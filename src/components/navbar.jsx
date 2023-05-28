@@ -2,9 +2,12 @@ import { React, useContext, useState } from "react";
 import { FiChevronDown, FiAlignJustify } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Subcontext from "../context/subContext";
+import { MdToggleOff, MdToggleOn } from 'react-icons/md';
+import Authcontext from "../context/authContext";
 
 function Navbar() {
-    const { sub, setsub } = useContext(Subcontext)
+    const { theme, settheme } = useContext(Authcontext);
+    const { sub, setsub } = useContext(Subcontext);
     const subj = ["DBMS", "CNP", "Oops", "Sensor Technology", "Technical english"]
 
     return (
@@ -45,7 +48,10 @@ function Navbar() {
                     <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
 
-                <div className='flex mr-6 gap-4 flex-1 justify-end'>
+                <div className='flex items-center mr-6 gap-4 flex-1 text-white justify-end'>
+                    Dark / Light
+                    {theme === 0 && <MdToggleOff onClick={() => settheme(1)} className="hover:cursor-pointer text-white text-4xl" />}
+                    {theme === 1 && <MdToggleOn onClick={() => settheme(0)} className="hover:cursor-pointer text-white text-4xl" />}
                     <Link to={"/profile"}><div className="user"><img className=' invert' src="user.png" alt="" width={"42px"} height={"22px"} /></div></Link>
                 </div>
             </div >
