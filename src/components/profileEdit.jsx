@@ -27,13 +27,13 @@ export default function ProfileEdit() {
         <div style={Theme[theme].textbg} className='h-screen overflow-scroll no-scrollbar'>
             <Link to={"/home"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><FaHome /></div></Link>
             <form className="wrapper3">
-                <div style={Theme[theme].body} className="left3">
+                <div style={Theme[theme].profile} className="left3">
                     <img src="profile.png" alt="user" width="100" />
                     <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.name} type='text' name='name' className='text-3xl bg-transparent text-center font-bold'></input>
-                    <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.clg} type='text' name='clg' className='font-bold bg-transparent text-center text-gray-300 text-xl'></input>
+                    <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.clg} type='text' name='clg' className='font-bold bg-transparent text-center text-gray-500 text-xl'></input>
                     <div className="flex items-center justify-around gap-3 mt-4">
-                        <button onClick={(e) => { e.preventDefault(); setProfile(newprofile); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Save changes</button>
-                        <button onClick={(e) => { e.preventDefault(); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Cancel</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setProfile(newprofile); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Save changes</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Cancel</button>
                     </div>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">

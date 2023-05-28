@@ -2,7 +2,7 @@ const Theme = [
     {
         body: { backgroundColor: "rgb(12, 12, 12)" },
         bodydesc: { backgroundColor: "rgb(12, 12, 12)" },
-        profile: { backgroundColor: "rgb(12, 12, 12)" },
+        profile: { backgroundColor: "#012a4a" },
         bg24: { backgroundColor: "rgb(24, 24, 24)" },
         homeCont: { backgroundColor: "#3B3838" },
         text: { color: "white" },
@@ -13,7 +13,7 @@ const Theme = [
         newdescHover: "bg-gray-700",
         newsBox: { backgroundColor: "#3B3838" },
         titlecolor: { color: "#828897" },
-        profilEeditBg: { backgroundColor: "#092525" },
+        profilEeditBg: { backgroundColor: "#2c7da0" },
         editCourses: { backgroundColor: "rgba(41, 39, 39, 0.8)" },
         editCourseInside: { backgroundColor: "rgb(48, 48, 48)" },
         boxshadow: "0px 0px 15px 4px black",
