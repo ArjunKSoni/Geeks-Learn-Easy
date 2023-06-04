@@ -26,10 +26,12 @@ import Signup from "./components/signup";
 import Register from "./components/register";
 import Maybeshow from "./extraGenerator/maybeshow";
 import Pdfread from "./components/pdfread";
+import Newsstate from "./context/newsState";
 
 function App() {
   return (
     <Router>
+      <Newsstate>
       <Authstate>
         <SubState>
           <NoteState>
@@ -59,6 +61,7 @@ function App() {
           </NoteState>
         </SubState>
       </Authstate>
+      </Newsstate>
     </Router>
   );
 }
