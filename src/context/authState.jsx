@@ -17,13 +17,12 @@ const Authstate = (props) => {
         github: "xyz.github.com",
     })
 
-
     const register = async (reg) => {
         const apicall = await fetch(`###`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
-            }, body: JSON.stringify({ user: reg.user, email: reg.email, password: reg.password, mobileNo: reg.mobile, subject: reg.subjects, year: reg.year }),
+            }, body: JSON.stringify({ user: reg.user, email: reg.email, password: reg.password, mobileNo: reg.mobile, subject: reg.subjects, year: reg.year, Linkedin: reg.Linkedin, github: reg.github }),
         })
         let data = await apicall.json()
         console.log(data)

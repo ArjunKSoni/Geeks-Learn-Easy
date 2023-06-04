@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
+    text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
@@ -25,7 +25,6 @@ ul li:hover .effecth {
 .text2:hover .disnone {
   display: block;
 }
-
 .user:hover .disnone {
   display: block;
 }
@@ -344,6 +343,7 @@ ul li:hover .effecth {
   background-color: transparent;
   color: white;
 }
+
 #subject {
   border: none;
   width: 60%;

@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useRoutes } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 
 export default function Register() {
     const navigate = useNavigate()
+    // const { params: { User } } = useRoutes()
+    // console.log(User);
     const { subj, setsub } = useContext(Subcontext)
     const [newsubj, setnewSubj] = useState([])
     useEffect(() => {

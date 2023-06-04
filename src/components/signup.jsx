@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Authcontext from '../context/authContext';
 
 export default function Signup() {
+    const { setProfile } = useContext(Authcontext)
     const navigate = useNavigate();
     const [newuser, setNewUser] = useState({
         user: "",
@@ -27,16 +29,16 @@ export default function Signup() {
                     </div>
                     <form className="signUp6" action="" method="get">
                         <div className="formGroup6">
-                            <input type="text" id="userName6" onChange={onChange} name="user" placeholder="User Name" required autocomplete="off" />
+                            <input type="text" id="userName6" onChange={onChange} name="user" placeholder="User Name" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="email" onChange={onChange} placeholder="Email ID" name="email" required autocomplete="off" />
+                            <input type="email" onChange={onChange} placeholder="Email ID" name="email" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="number" onChange={onChange} id="confirmPassword6" name="mobile" placeholder="Phone Number" min="10" required autocomplete="off" />
+                            <input type="number" onChange={onChange} id="confirmPassword6" name="mobile" placeholder="Phone Number" min="10" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="password" onChange={onChange} id="password6" name="password" placeholder="Password" required autocomplete="off" />
+                            <input type="password" onChange={onChange} id="password6" name="password" placeholder="Password" required autoComplete="off" />
                         </div>
 
                         <div className="formGroup6">

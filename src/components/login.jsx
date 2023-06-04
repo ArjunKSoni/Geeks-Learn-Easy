@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
+
 
 export default function Login() {
     const navigate = useNavigate();
@@ -21,10 +23,10 @@ export default function Login() {
                     <form className="login6" action="" method="get">
 
                         <div className="formGroup6">
-                            <input type="email" onChange={(e) => { setmail(e.target.value) }} placeholder="Email ID" name="email" required autocomplete="off" />
+                            <input type="email" onChange={(e) => { setmail(e.target.value) }} placeholder="Email ID" name="email" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="password" onChange={(e) => { setpass(e.target.value) }} id="password6" name='password' placeholder="Password" required autocomplete="off" />
+                            <input type="password" onChange={(e) => { setpass(e.target.value) }} id="password6" name='password' placeholder="Password" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
                             <button type="submit" onClick={(e) => { e.preventDefault(); (email === "gle@gle.com" && pass === "gle") ? navigate("/home") : alert("Incorrect Credentials") }} className="btn26">LOG IN</button>
