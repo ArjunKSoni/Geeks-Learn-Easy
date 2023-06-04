@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Authcontext from '../context/authContext';
 
 export default function Signup() {
-    const { setProfile } = useContext(Authcontext)
+    const { setregister } = useContext(Authcontext)
     const navigate = useNavigate();
     const [newuser, setNewUser] = useState({
         user: "",
@@ -12,8 +12,24 @@ export default function Signup() {
         mobile: ""
     });
 
+    const EmailVal = (mail) => {
+        const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        return (reg.test(mail))
+    }
+
     const onChange = (e) => {
         setNewUser({ ...newuser, [e.target.name]: e.target.value })
+    }
+    const signup = (e) => {
+        e.preventDefault();
+        if (EmailVal(newuser.email.trim()) !== true) alert("Invalid Email")
+        else if (newuser.user.trim() === "") alert("User can't be empty ")
+        else if (newuser.mobile.trim() === "") alert("Mobile can't be empty")
+        else if (newuser.password.trim() === "") alert("Fill the password ")
+        else {
+            setregister(newuser);
+            navigate("/register");
+        }
     }
 
     return (
@@ -42,7 +58,7 @@ export default function Signup() {
                         </div>
 
                         <div className="formGroup6">
-                            <button onClick={(e) => { e.preventDefault(); navigate("/register") }} type="submit" className="btn26">Register</button>
+                            <button onClick={signup} type="submit" className="btn26">Register</button>
                         </div>
                         <div className="checkBox6">
                             <div className="text6" id="checkbox6">Aldready have an account? <Link to={"/"} style={{ color: "rgb(134, 230, 209)" }}>Login</Link></div>

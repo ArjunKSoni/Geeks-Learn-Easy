@@ -20,7 +20,7 @@ export default function Profile() {
             <div className="wrapper3">
                 <div style={Theme[theme].profile} className="left3">
                     <img src="profile.png" alt="user" width="100" />
-                    <h4 className='text-3xl font-bold'>{profile.name}</h4>
+                    <h4 className='text-3xl font-bold'>{profile.user}</h4>
                     <p className='font-bold text-gray-500 text-xl'>{profile.clg}</p>
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
@@ -38,7 +38,7 @@ export default function Profile() {
                             </div>
                             <div className="data3">
                                 <h4 className='font-bold text-lg'>Phone</h4>
-                                <p>{profile.Mobile}</p>
+                                <p>{profile.mobileNo}</p>
 
                             </div>
                         </div>

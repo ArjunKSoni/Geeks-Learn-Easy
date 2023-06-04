@@ -6,22 +6,22 @@ import Theme from '../extraGenerator/theme';
 
 export default function ProfileEdit() {
     const { theme } = useContext(Authcontext);
-    const { setProfile, profile } = useContext(Authcontext);
+    const { setProfile, profile, updateProfile } = useContext(Authcontext);
     const navigate = useNavigate();
     const [newprofile, setnewProfile] = useState({
-        name: profile.name,
+        user: profile.user,
         clg: profile.clg,
-        email: profile.email,
-        Mobile: profile.Mobile,
+        mobileNo: profile.mobileNo,
         branch: profile.branch,
         year: profile.year,
         Linkedin: profile.Linkedin,
-        github: profile.github,
+        github: profile.github
     })
 
     const changed = (e) => {
         setnewProfile({ ...newprofile, [e.target.name]: e.target.value })
     }
+
 
     return (
         <div style={Theme[theme].textbg} className='h-screen overflow-scroll no-scrollbar'>
@@ -29,10 +29,10 @@ export default function ProfileEdit() {
             <form className="wrapper3">
                 <div style={Theme[theme].profile} className="left3">
                     <img src="profile.png" alt="user" width="100" />
-                    <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.name} type='text' name='name' className='text-3xl bg-transparent text-center font-bold'></input>
+                    <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.user} type='text' name='user' className='text-3xl bg-transparent text-center font-bold'></input>
                     <input style={{ width: "100%" }} onChange={changed} defaultValue={profile.clg} type='text' name='clg' className='font-bold bg-transparent text-center text-gray-500 text-xl'></input>
                     <div className="flex items-center justify-around gap-3 mt-4">
-                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setProfile(newprofile); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Save changes</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); updateProfile(newprofile); }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Save changes</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profile") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Cancel</button>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ export default function ProfileEdit() {
                             </div>
                             <div className="data3">
                                 <h4 className='font-bold text-lg'>Phone</h4>
-                                <input style={{ width: "100%" }} onChange={changed} type='number' defaultValue={profile.Mobile} name='Mobile' className=' bg-transparent '></input>
+                                <input style={{ width: "100%" }} onChange={changed} type='number' defaultValue={profile.mobileNo} name='mobileNo' className=' bg-transparent '></input>
 
                             </div>
                         </div>
