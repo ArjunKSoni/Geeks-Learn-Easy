@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useLocation, useNavigate, useRoutes } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 import Authcontext from '../context/authContext'
 
@@ -55,10 +54,10 @@ export default function Register() {
                             <input type="text" name="branch" onChange={detailchange} placeholder="Branch" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="text" name="Linkedin" onChange={detailchange} placeholder="Linked in" required autoComplete="off" />
+                            <input type="text" name="Linkedin" onChange={detailchange} placeholder="Linkedin Profile" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
-                            <input type="text" name="github" onChange={detailchange} placeholder="Github" required autoComplete="off" />
+                            <input type="text" name="github" onChange={detailchange} placeholder="Github Profile" required autoComplete="off" />
                         </div>
                         <div className="formGroup6">
                             <select name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>

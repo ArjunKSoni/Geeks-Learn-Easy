@@ -6,6 +6,7 @@ const Authstate = (props) => {
     const navigate = useNavigate()
     const [token, setToken] = useState()
     const [theme, settheme] = useState(0)
+    const [redirect, setredirect] = useState(0)
     const [regis, setregister] = useState({
         user: "",
         email: "",
@@ -17,6 +18,7 @@ const Authstate = (props) => {
 
     const register = async (reg) => {
         try {
+            setredirect(true)
             const apicall = await fetch(`https://gleauth.onrender.com/api/auth/register`, {
                 method: 'POST',
                 headers: {
@@ -26,6 +28,7 @@ const Authstate = (props) => {
             let data = await apicall.json()
             setToken(data.authToken)
             setProfile(data.user)
+            setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
             else (navigate("/home"))
         } catch (error) {
@@ -35,6 +38,7 @@ const Authstate = (props) => {
 
     const updateProfile = async (reg) => {
         try {
+            setredirect(true)
             const apicall = await fetch(`https://gleauth.onrender.com/api/auth/updateProfile`, {
             method: 'POST',
             headers: {
@@ -44,8 +48,9 @@ const Authstate = (props) => {
             let data = await apicall.json()
         setToken(data.authToken)
             setProfile(data.user)
+            setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
-            else (navigate("/home"))
+            else (navigate("/profile"))
         } catch (error) {
             console.log(error);
         }
@@ -54,6 +59,7 @@ const Authstate = (props) => {
 
     const login = async (email, pass) => {
         try {
+            setredirect(true)
             const apicall = await fetch(`https://gleauth.onrender.com/api/auth/login`, {
             method: 'POST',
             headers: {
@@ -63,6 +69,7 @@ const Authstate = (props) => {
             let data = await apicall.json()
             setToken(data.authToken)
             setProfile(data.user)
+            setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
             else (navigate("/home"))
         } catch (error) {
@@ -70,7 +77,7 @@ const Authstate = (props) => {
     }
     }
     return (
-        <Authcontext.Provider value={{ updateProfile, regis, setregister, register, theme, settheme, token, login, setToken, profile, setProfile }}>
+        <Authcontext.Provider value={{ redirect, updateProfile, regis, setregister, register, theme, settheme, token, login, setToken, profile, setProfile }}>
             {props.children}
         </Authcontext.Provider>
     )
