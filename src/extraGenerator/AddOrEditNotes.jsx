@@ -26,16 +26,27 @@ export default function AddOrEditNotes() {
     let year = date.getFullYear();
     let currentDate = `${day}-${month}-${year}`;
 
+    const clickedLinked = (e) => {
+        e.preventDefault()
+        settitle(user.title)
+        setDesc(user.desc)
+        editNote(myNotes.concat({ title, desc, lastModified: user.lastModified, token: "1234" }))
+        navigate("/mynotes")
+    }
+
     const onclicked = (e) => {
         e.preventDefault()
-        editNote(myNotes.concat({ title, desc, lastModified: currentDate, token: "1234" }))
-        navigate("/mynotes")
+        if (title.trim() === "" && desc.trim() === "") (navigate("/mynotes"))
+        else {
+            editNote(myNotes.concat({ title, desc, lastModified: currentDate, token: "1234" }))
+            navigate("/mynotes")
+        }
     }
     return (
         <div style={Theme[theme].profile} className='min-h-screen text-black overflow-hidden flex items-start justify-center'>
             <div className="notes8 text-black">
                 <div className="title8 flex items-center justify-center px-2">
-                    <Link to={"/mynotes"}><div className={`bg-black text-white px-10 rounded-xl font-bold text-2xl mt-2 hover:bg-green-600 transition-all py-2`}><AiOutlineArrowLeft /></div></Link>
+                    <Link onClick={clickedLinked}><div className={`bg-black text-white px-10 rounded-xl font-bold text-2xl mt-2 hover:bg-green-600 transition-all py-2`}><AiOutlineArrowLeft /></div></Link>
                     <input type="text" name="title" onChange={(e) => settitle(e.target.value)} defaultValue={title} id="title8" placeholder="Title" />
                     {!edit && <><Link onClick={onclicked} className='bg-green-800 text-white px-10 rounded-xl font-bold  mt-2 hover:bg-green-600 transition-all py-2'>Save</Link></>}
                     {edit && <><Link onClick={onclicked} className='bg-green-800 text-white px-10 rounded-xl font-bold  mt-2 hover:bg-green-600 transition-all py-2'>edit</Link></>}
