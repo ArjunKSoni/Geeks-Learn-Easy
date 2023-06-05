@@ -3,7 +3,7 @@ import Subcontext from '../context/subContext'
 import Authcontext from '../context/authContext'
 
 export default function Register() {
-    const { register } = useContext(Authcontext);
+    const { register, redirect } = useContext(Authcontext);
     const { subj, setsub } = useContext(Subcontext)
     const [newsubj, setnewSubj] = useState([])
     const [details, setdet] = useState({
@@ -36,6 +36,7 @@ export default function Register() {
 
     return (
         <div className='home min-h-screen bodyregister text-white'>
+            {redirect === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col absolute top-0 bottom-0 h-full w-full items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap justify-center mr-10'>
                 <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
                 <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
