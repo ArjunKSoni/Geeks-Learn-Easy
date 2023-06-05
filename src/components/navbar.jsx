@@ -12,39 +12,17 @@ function Navbar() {
 
     return (
         <div>
-            <div className=' p-2  z-10 bg-black h-fit flex-wrap reshide'>
+            <div className='  z-10 bg-black h-fit flex-wrap reshide'>
                 <div className='flex gap-3 items-center justify-start flex-1'>
                     <ul className=' pl-4 flex gap-7 flex-wrap items-center justify-center'>
-                        {/* <li className="text1 hover:cursor-pointer"><div className='text-white flex py-2 gap-1 items-center justify-center font-bold'>Courses <FiChevronDown className=' mt-1  effecth' /></div>
-                            <div className={`text-white absolute disnone mr-4`}>
-                                <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                                <ul className="bg-gray-800 ">
-                                    <Link to={"/content"}><li value={"DBMS"} className="p-1 px-3 hover:bg-gray-700">DBMS</li></Link>
-                                    <Link to={"/content"}><li value={"CNP"} className="p-1 px-3 hover:bg-gray-700">CNP</li></Link>
-                                    <Link to={"/content"}><li value={"Oops"} className="p-1 px-3 hover:bg-gray-700">Oops</li></Link>
-                                    <Link to={"/content"}><li value={"Sensor Technology"} className="p-1 px-3 hover:bg-gray-700">Sensor Technology</li></Link>
-                                    <Link to={"/content"}><li value={"Technical English"} className="p-1 px-3 hover:bg-gray-700">Technical English</li></Link>
-                                </ul>
-                            </div>
-                        </li> */}
                         <Link to={"/content"}><li className="hover:cursor-pointer"><div className='text-white flex py-2  gap-1 items-center justify-center font-bold'>GLE Notes</div></li></Link>
-                        {/* <li className="text2 hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>PYQ's <FiChevronDown className=' mt-1 effecth' /></div>
-                            <div className={`text-white absolute disnone`}>
-                                <FiChevronDown className=" rotate-180 w-full  h-4 bg-green-500" />
-                                <ul className="bg-gray-800">
-                                    <li className="p-1 px-2 hover:bg-gray-700">MidSem-1</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">MidSem-2</li>
-                                    <li className="p-1 px-2 hover:bg-gray-700">EndSem</li>
-                                </ul>
-                            </div>
-                        </li> */}
                         <Link to={"/mynotes"}><li className="hover:cursor-pointer"><div className='text-white flex py-2  gap-1 items-center justify-center font-bold'>My Notes</div></li></Link>
                         <Link to={"/news"}><li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>News</div></li></Link>
                     </ul>
                 </div>
 
-                <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center mr-10'>
-                    <Link to={"/home"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
+                <div className='relative gap-1 flex flex-1 mt-2 h-fit items-center flex-wrap w-screen justify-center mr-10'>
+                    <Link to={"/home"}><img src="favicon.png" alt="" width={"60px"} height={"50px"} /></Link>
                     <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
 
@@ -68,7 +46,7 @@ function Navbar() {
                     </div>
                 </div>
                 <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center'>
-                    <Link to={"/home"}><img src="logo192.png" alt="" width={"32px"} height={"32px"} /></Link>
+                    <Link to={"/home"}><img src="favicon.png" alt="" width={"60px"} height={"50px"} /></Link>
                     <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
                 {theme === 0 && <MdToggleOff onClick={() => settheme(1)} className="hover:cursor-pointer text-white text-4xl" />}
