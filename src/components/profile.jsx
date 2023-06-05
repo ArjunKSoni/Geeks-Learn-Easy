@@ -63,11 +63,11 @@ export default function Profile() {
                             <div className="projects_data3">
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Linkedin</h4>
-                                    <p>{profile.Linkedin}</p>
+                                    <a href="profile.Linkedin" target='_blank'>Linkedin</a>
                                 </div>
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Git hub</h4>
-                                    <p>{profile.github}</p>
+                                    <a href="profile.github" target='_blank'>Github</a>
                                 </div>
                             </div>
                         </div>
