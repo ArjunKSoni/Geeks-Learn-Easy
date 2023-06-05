@@ -35,7 +35,7 @@ export default function Signup() {
     return (
         <div className='home min-h-screen bodyregister text-white'>
             <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap justify-center mr-10'>
-                <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
+                <img src="favicon.png" alt="" width={"32px"} height={"32px"} />
                 <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
             </div>
             <div className="container6 pt-10">
