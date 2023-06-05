@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Notecontext from '../context/noteContext'
 import Theme from './theme'
 import Authcontext from '../context/authContext';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 export default function AddOrEditNotes() {
     const { theme } = useContext(Authcontext);
@@ -13,6 +14,11 @@ export default function AddOrEditNotes() {
     const { user, edit } = location.state
     const [title, settitle] = useState("");
     const [desc, setDesc] = useState("");
+
+    useEffect(() => {
+        settitle(user.title)
+        setDesc(user.desc)
+    }, [])
 
     const date = new Date();
     let day = date.getDate();
@@ -26,13 +32,19 @@ export default function AddOrEditNotes() {
         navigate("/mynotes")
     }
     return (
-        <div style={Theme[theme].textbg} className='min-h-screen overflow-hidden flex items-start justify-center text-white'>
-            <form className='mt-10 flex items-center justify-center flex-col'>
-                <input style={{ width: "22rem" }} onChange={(e) => settitle(e.target.value)} placeholder='Title' className='bg-gray-600 mb-7 px-3 text-center text-2xl font-semibold rounded-lg' type="text" defaultValue={user.title} id='title' />
-                <div><textarea style={{ width: "22rem" }} placeholder='Notes here...' onChange={(e) => setDesc(e.target.value)} rows={10} type="text" className='mt-5 bg-gray-600 p-3 text-xl rounded-lg' defaultValue={user.desc} /></div>
-                {!edit && <><Link onClick={onclicked} className='bg-green-800 px-10 rounded-xl font-bold text-lg mt-2 hover:bg-green-600 transition-all py-2'>Save</Link></>}
-                {edit && <><Link onClick={onclicked} className='bg-green-800 px-10 rounded-xl font-bold text-lg mt-2 hover:bg-green-600 transition-all py-2'>edit</Link></>}
-            </form>
+        <div style={Theme[theme].profile} className='min-h-screen text-black overflow-hidden flex items-start justify-center'>
+            <div className="notes8 text-black">
+                <div className="title8 flex items-center justify-center px-2">
+                    <Link to={"/mynotes"}><div className={`bg-black text-white px-10 rounded-xl font-bold text-2xl mt-2 hover:bg-green-600 transition-all py-2`}><AiOutlineArrowLeft /></div></Link>
+                    <input type="text" name="title" onChange={(e) => settitle(e.target.value)} defaultValue={title} id="title8" placeholder="Title" />
+                    {!edit && <><Link onClick={onclicked} className='bg-green-800 text-white px-10 rounded-xl font-bold  mt-2 hover:bg-green-600 transition-all py-2'>Save</Link></>}
+                    {edit && <><Link onClick={onclicked} className='bg-green-800 text-white px-10 rounded-xl font-bold  mt-2 hover:bg-green-600 transition-all py-2'>edit</Link></>}
+                </div>
+                <div className="container8">
+                    <textarea name="text" id="text8" className="text8" cols="30" rows="20" placeholder='Notes here...' onChange={(e) => setDesc(e.target.value)} type="text" defaultValue={desc} />
+                </div>
+            </div>
+
         </div>
     )
 }

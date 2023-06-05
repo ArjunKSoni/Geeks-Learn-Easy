@@ -27,7 +27,7 @@ export default function Home() {
                             <div style={{ backgroundColor: colour[2] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Important Questions <img src="ques1.png" alt="Ques" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all the important questions at one place</div>
                     </Link>
-                    <Link style={Theme[theme].boxDown} to="/pdfread" className="box2 m-4">
+                    <Link style={Theme[theme].boxDown} to="/syllabus" className="box2 m-4">
                         <div style={{ backgroundColor: colour[5] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Syllabus <img src="syllabus2.png" alt="note" width="90rem" height="90rem" /></div>
                         <div className="sub2 text-center flex h-2/4 items-center justify-center">Know your syllabus</div>
                     </Link>

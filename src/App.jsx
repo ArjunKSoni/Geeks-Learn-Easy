@@ -27,6 +27,7 @@ import Register from "./components/register";
 import Maybeshow from "./extraGenerator/maybeshow";
 import Pdfread from "./components/pdfread";
 import Newsstate from "./context/newsState";
+import Syllabus from "./components/syllabus";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
               <Route exact path='/mynotes' element={<MyNotes />} />
               <Route exact path='/news' element={<News />} />
               <Route exact path='/' element={<Login />} />
+                <Route exact path='/syllabus' element={<Syllabus />} />
               <Route exact path='/pdfread' element={<Pdfread />} />
               <Route exact path='/register' element={<Register />} />
               <Route exact path='/signup' element={<Signup />} />
