@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 
 const Authstate = (props) => {
     const navigate = useNavigate()
-    const [token, setToken] = useState()
+    const [token, setToken] = useState("")
     const [theme, settheme] = useState(0)
     const [redirect, setredirect] = useState(0)
     const [regis, setregister] = useState({
