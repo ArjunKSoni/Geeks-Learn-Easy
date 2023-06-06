@@ -3,6 +3,7 @@ import { FaHome } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import Authcontext from '../context/authContext';
 import Theme from '../extraGenerator/theme';
+import { BsPencilSquare } from 'react-icons/bs';
 
 export default function ProfileEdit() {
     const { theme } = useContext(Authcontext);
@@ -46,7 +47,7 @@ export default function ProfileEdit() {
                                 <p>{profile.email}</p>
                             </div>
                             <div className="data3">
-                                <h4 className='font-bold text-lg'>Phone</h4>
+                                <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Phone <BsPencilSquare /></h4>
                                 <input style={{ width: "100%" }} onChange={changed} type='number' defaultValue={profile.mobileNo} name='mobileNo' className=' bg-transparent '></input>
 
                             </div>
@@ -56,13 +57,13 @@ export default function ProfileEdit() {
                             <h3 className='font-bold text-xl'>Details</h3>
                             <div className="projects_data3">
                                 <div className="data3">
-                                    <h4 className='font-bold text-lg'>Branch</h4>
+                                    <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Branch <BsPencilSquare /></h4>
                                     <input style={{ width: "100%" }} onChange={changed} type='text' defaultValue={profile.branch} name='branch' className=' bg-transparent '></input>
                                     <h4 className='font-bold text-lg'>Courses</h4>
                                     <p>DBMS,CNP</p>
                                 </div>
                                 <div className="data3">
-                                    <h4 className='font-bold text-lg'>Year</h4>
+                                    <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Year <BsPencilSquare /></h4>
                                     <input style={{ width: "100%" }} onChange={changed} type='number' defaultValue={profile.year} name='year' className=' bg-transparent '></input>
                                 </div>
                             </div>
@@ -71,11 +72,11 @@ export default function ProfileEdit() {
                             <h3 className='font-bold text-xl'>Connect</h3>
                             <div className="projects_data3">
                                 <div className="data3">
-                                    <h4 className='font-bold text-lg'>Linkedin</h4>
+                                    <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Linkedin <BsPencilSquare /></h4>
                                     <input style={{ width: "100%" }} onChange={changed} type='text' defaultValue={profile.Linkedin} name='Linkedin' className=' bg-transparent '></input>
                                 </div>
                                 <div className="data3">
-                                    <h4 className='font-bold text-lg'>Git hub</h4>
+                                    <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Github <BsPencilSquare /></h4>
                                     <input style={{ width: "100%" }} onChange={changed} type='text' defaultValue={profile.github} name='github' className=' bg-transparent '></input>
                                 </div>
                             </div>
