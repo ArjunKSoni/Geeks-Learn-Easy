@@ -14,7 +14,7 @@ export default function Footer() {
             <div className='flex  p-2 justify-around flex-wrap'>
                 <div className='footerBox'>
                     <div className='flex gap-3 items-center justify-center my-4'>
-                        <img src="logo192.png" alt="" width={"32px"} height={"32px"} />
+                        <img src="favicon.png" alt="" width={"32px"} height={"32px"} />
                         <h3 className='text-white flex font-bold text-xl'>Geeks Learn Easy</h3>
                     </div>
                     <p className='text-center mb-2 font-semibold'>A comprehensive platform for students to make learning easy</p>
