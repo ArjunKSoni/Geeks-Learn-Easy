@@ -7,7 +7,7 @@ import EditCourses from './editCourses';
 import Theme from '../extraGenerator/theme';
 
 export default function Profile() {
-    const { theme } = useContext(Authcontext);
+    const { theme, setToken } = useContext(Authcontext);
     const {profile} = useContext(Authcontext);
     const { hide, sethide } = useContext(Subcontext);
 
@@ -25,7 +25,7 @@ export default function Profile() {
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
-                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">

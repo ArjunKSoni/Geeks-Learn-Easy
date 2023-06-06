@@ -38,19 +38,20 @@ const Authstate = (props) => {
 
     const updateProfile = async (reg) => {
         try {
-            setredirect(true)
-            const apicall = await fetch(`https://gleauth.onrender.com/api/auth/updateProfile`, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-                }, body: JSON.stringify({ update: reg, filter: { _id: profile._id } }),
-        })
-            let data = await apicall.json()
-        setToken(data.authToken)
-            setProfile(data.user)
-            setredirect(false)
-            if (data.success === "fail") { alert(data.message); navigate("/") }
-            else (navigate("/profile"))
+            if (token) {
+                setredirect(true)
+                const apicall = await fetch(`https://gleauth.onrender.com/api/auth/updateProfile`, {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type": "application/json"
+                    }, body: JSON.stringify({ update: reg, filter: { _id: profile._id } }),
+                })
+                let data = await apicall.json()
+                setProfile(data.user)
+                setredirect(false)
+                if (data.success === "fail") { alert(data.message); navigate("/") }
+                else (navigate("/profile"))
+            } else { alert("UnAuthorised Access") }
         } catch (error) {
             console.log(error);
         }
