@@ -26,7 +26,7 @@ const Theme = [
         textbgw: { color: "rgb(24, 24, 24)", backgroundColor: "white" },
         boxDown: { backgroundColor: "#d1eaf0" },
         textclass: "text-black",
-        bodydesc2: { backgroundColor: "white" },
+        bodydesc2: { backgroundColor: "rgb(12, 12, 12)" },
         body: { backgroundColor: "#e1f4fa" },
         profile: { backgroundColor: "#add8e6" },
         bg24: { backgroundColor: "white" },

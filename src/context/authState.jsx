@@ -19,7 +19,7 @@ const Authstate = (props) => {
     const register = async (reg) => {
         try {
             setredirect(true)
-            const apicall = await fetch(`https://gleauth.onrender.com/api/auth/register`, {
+            const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/auth/register`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -40,7 +40,7 @@ const Authstate = (props) => {
         try {
             if (token) {
                 setredirect(true)
-                const apicall = await fetch(`https://gleauth.onrender.com/api/auth/updateProfile`, {
+                const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/auth/updateProfile`, {
                     method: 'POST',
                     headers: {
                         "Content-Type": "application/json"
@@ -61,7 +61,7 @@ const Authstate = (props) => {
     const login = async (email, pass) => {
         try {
             setredirect(true)
-            const apicall = await fetch(`https://gleauth.onrender.com/api/auth/login`, {
+            const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/auth/login`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
