@@ -551,7 +551,7 @@ input:focus {
   border: none;
   background: transparent;
   text-decoration: none;
-  width: 85%;
+  width: 70%;
   text-align: center;
   font-weight: bold;
 }
@@ -570,7 +570,6 @@ input:focus {
   padding: 2rem;
   border: none;
   width: -webkit-fill-available;
-  overflow-y: scroll;
 }
 
 .notes8 input:focus {

@@ -22,7 +22,7 @@ function Navbar() {
                 </div>
 
                 <div className='relative gap-1 flex flex-1 mt-2 h-fit items-center flex-wrap w-screen justify-center mr-10'>
-                    <Link to={"/home"}><img src="favicon.png" alt="" width={"60px"} height={"50px"} /></Link>
+                    <Link to={"/home"}><img src="favicon.png" alt="" width={"50px"} height={"50px"} /></Link>
                     <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
 
@@ -46,7 +46,7 @@ function Navbar() {
                     </div>
                 </div>
                 <div className='relative gap-1 flex items-center flex-1 mt-2 h-fit flex-wrap w-screen justify-center'>
-                    <Link to={"/home"}><img src="favicon.png" alt="" width={"60px"} height={"50px"} /></Link>
+                    <Link to={"/home"}><img src="favicon.png" alt="" width={"50px"} height={"50px"} /></Link>
                     <Link to={"/home"}><h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3></Link>
                 </div>
                 {theme === 0 && <MdToggleOff onClick={() => settheme(1)} className="hover:cursor-pointer text-white text-4xl" />}

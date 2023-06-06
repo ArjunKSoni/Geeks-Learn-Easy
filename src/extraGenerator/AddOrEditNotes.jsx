@@ -43,8 +43,8 @@ export default function AddOrEditNotes() {
         }
     }
     return (
-        <div style={Theme[theme].profile} className='min-h-screen text-black overflow-hidden flex items-start justify-center'>
-            <div className="notes8 text-black">
+        <div style={Theme[theme].profile} className='h-screen  text-black flex items-start justify-center'>
+            <div className="notes8  text-black">
                 <div className="title8 flex items-center justify-center px-2">
                     <Link onClick={clickedLinked}><div className={`bg-black text-white px-10 rounded-xl font-bold text-2xl mt-2 hover:bg-green-600 transition-all py-2`}><AiOutlineArrowLeft /></div></Link>
                     <input type="text" name="title" onChange={(e) => settitle(e.target.value)} defaultValue={title} id="title8" placeholder="Title" />
@@ -52,10 +52,9 @@ export default function AddOrEditNotes() {
                     {edit && <><Link onClick={onclicked} className='bg-green-800 text-white px-10 rounded-xl font-bold  mt-2 hover:bg-green-600 transition-all py-2'>edit</Link></>}
                 </div>
                 <div className="container8">
-                    <textarea name="text" id="text8" className="text8" cols="30" rows="20" placeholder='Notes here...' onChange={(e) => setDesc(e.target.value)} type="text" defaultValue={desc} />
+                    <textarea name="text" id="text8" className="text8" cols="30" rows="10" placeholder='Notes here...' onChange={(e) => setDesc(e.target.value)} type="text" defaultValue={desc} />
                 </div>
             </div>
-
         </div>
     )
 }
