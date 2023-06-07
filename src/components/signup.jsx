@@ -1,8 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Authcontext from '../context/authContext';
+import Subcontext from '../context/subContext';
 
 export default function Signup() {
+    const { getallsubjects } = useContext(Subcontext)
+    useEffect(() => {
+        getallsubjects()
+    }, [])
     const { setregister } = useContext(Authcontext)
     const navigate = useNavigate();
     const [newuser, setNewUser] = useState({

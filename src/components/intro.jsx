@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import Subcontext from '../context/subContext'
 
 export default function Intro() {
+    const { getallsubjects } = useContext(Subcontext)
+    useEffect(() => {
+        getallsubjects()
+    }, [])
     return (
         <div className='body9'>
             <div className="container9">

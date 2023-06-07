@@ -2,12 +2,18 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import Authcontext from '../context/authContext';
+import Subcontext from '../context/subContext';
+import { useEffect } from 'react';
 
 
 export default function Login() {
     const { login, redirect } = useContext(Authcontext)
     const [email, setmail] = useState("")
     const [pass, setpass] = useState("")
+    const { getallsubjects } = useContext(Subcontext)
+    useEffect(() => {
+        getallsubjects()
+    }, [])
 
     const EmailVal = (mail) => {
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

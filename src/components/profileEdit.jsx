@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { FaHome } from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Authcontext from '../context/authContext';
 import Theme from '../extraGenerator/theme';
 import { BsPencilSquare } from 'react-icons/bs';
@@ -9,6 +9,7 @@ export default function ProfileEdit() {
     const { theme } = useContext(Authcontext);
     const { profile, updateProfile, redirect } = useContext(Authcontext);
     const navigate = useNavigate();
+
     const [newprofile, setnewProfile] = useState({
         user: profile.user,
         clg: profile.clg,

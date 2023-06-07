@@ -314,6 +314,16 @@ ul li:hover .effecth {
     height: fit-content;
   box-shadow: 0 20px 30px black;
 }
+.navButton input {
+  background-color: #000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.navButton input:focus {
+  width: 90%;
+  background-color: green;
+}
 
 .btn6 button {
   padding: 3px;

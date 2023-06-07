@@ -4,8 +4,9 @@ import Authcontext from '../context/authContext'
 
 export default function Register() {
     const { register, redirect } = useContext(Authcontext);
-    const { subj, setsub } = useContext(Subcontext)
+    const { subj, setsub, addsubjects } = useContext(Subcontext)
     const [newsubj, setnewSubj] = useState([])
+    const { sublist } = useContext(Subcontext);
     const [details, setdet] = useState({
         year: "",
         branch: "",
@@ -25,6 +26,7 @@ export default function Register() {
     const onRegister = (e) => {
         e.preventDefault();
         setsub(newsubj);
+        addsubjects(newsubj);
         if (details.year.trim() === "") alert("Year can't be empty")
         else if (details.branch.trim() === "") alert("Branch can't be empty")
         else if (details.Linkedin.trim() === "") alert("Linkedin can't be empty")
@@ -64,10 +66,9 @@ export default function Register() {
                             <select name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
                                 <option disabled hidden >Select Subject</option>
                                 <option value="DBMS">DBMS</option>
-                                <option value="CNP">CNP</option>
-                                <option value="Oops">Oops</option>
-                                <option value="Sensor_Technology">Sensor Technology</option>
-                                <option value="Technical_English">Technical English</option>
+                                {sublist.map((e) => {
+                                    return <option value={e}>{e}</option>
+                                })}
                             </select>
                         </div>
                         <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>

@@ -67,9 +67,9 @@ export default function Body() {
     )
 }
 
-// for some bold words in between =>   <spam className='font-bold'>your word</spam>
+// for some bold words in between =>   <span className='font-bold'>your word</span>
 
-// words with greater text size =>     <spam className='text-xl'>your word</spam>
+// words with greater text size =>     <span className='text-xl'>your word</span>
 
 // for links in between =>             <a className='text-green-700 font-semibold underline mx-1' href="https://www.google.com/">google</a>
 
