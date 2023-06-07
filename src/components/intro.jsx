@@ -28,7 +28,7 @@ export default function Intro() {
                             adipisci ex nemo perspiciatis soluta ab quod ullam!
                         </div>
                         <div className="btn9">
-                            <Link to={"/signup"}><div className='link'>Register"</div></Link>
+                            <Link to={"/signup"}><div style={{ width: "95px" }} className='link'>Register"</div></Link>
                         </div>
                     </div>
                     <div className="illu">
