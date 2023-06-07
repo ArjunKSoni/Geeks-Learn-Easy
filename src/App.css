@@ -322,6 +322,7 @@ ul li:hover .effecth {
 
 .navButton input:focus {
   width: 90%;
+  text-decoration: none;
   background-color: green;
 }
 
