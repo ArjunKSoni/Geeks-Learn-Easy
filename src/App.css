@@ -287,11 +287,10 @@ ul li:hover .effecth {
 
 /* align items center vertically and horizontally  */
 .container6 {
-  padding-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center !important;
-  height: 100vh;
+  height: 100%;
 }
 .editcontainer {
   padding-bottom: 5rem;
@@ -613,5 +612,213 @@ textarea {
 
   #title8 {
     width: 72%;
+  }
+}
+/* =============================================================== */
+.container9 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar9 {
+  height: 10vh;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+.navbar9 .btn9 {
+  background: transparent;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  width: 3rem;
+}
+
+.options9 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.options9 .btn {
+  margin-left: 1.5rem;
+}
+
+.header9 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.content9 {
+  width: 50%;
+  max-width: 600px;
+  text-align: justify;
+  order: 2;
+}
+
+.illu {
+  width: 50%;
+  order: 1;
+}
+
+.options9 .links a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.options9 .links a:hover {
+  color: pink;
+}
+
+
+.heading9 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.heading9 h1:hover {
+  color: #e66fa0;
+}
+
+.para9 {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.para9:hover {
+  color: #e66fa0;
+}
+
+.btn9 input {
+  border: none;
+  color: #fff;
+  border: solid 2px hsl(309, 81%, 71%);
+  color: #000;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+input:hover {
+  background: hsl(309, 81%, 71%);
+  color: #fff;
+}
+
+.illu img {
+  width: 100%;
+}
+
+.body9 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Media Queries for Responsiveness */
+
+@media screen and (max-width: 768px) {
+  .navbar9 {
+    padding: 0 1rem;
+  }
+
+  .logo img {
+    width: 2rem;
+  }
+
+  .options9 .links a {
+    font-size: 1rem;
+  }
+
+  .header9 {
+    padding: 0 1rem;
+  }
+
+  .heading9 h1 {
+    font-size: 2rem;
+  }
+
+  .para9 {
+    font-size: 1.2rem;
+  }
+
+  .btn9 input {
+    font-size: 0.8rem;
+  }
+
+  .content9 {
+    margin-top: 2.5rem;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .illu {
+    width: 100%;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .navbar9 {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar9.scrolled9 {
+    background-color: pink
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+  }
+
+  .content9 {
+    margin-top: 10rem;
+    width: 100%;
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .options9 {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .options9 .links a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn9 {
+    margin-left: 0;
   }
 }

@@ -28,6 +28,8 @@ import Maybeshow from "./extraGenerator/maybeshow";
 import Pdfread from "./components/pdfread";
 import Newsstate from "./context/newsState";
 import Syllabus from "./components/syllabus";
+import Intro from "./components/intro";
+import ShowFooter from "./extraGenerator/showFooter";
 
 function App() {
   return (
@@ -42,13 +44,14 @@ function App() {
       <Routes>
             <Route exact path={`/content`} element={<Content />} />
           <Route exact path='/about' element={<About />} />
+                <Route exact path='/' element={<Intro />} />
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/profileEdit' element={<ProfileEdit />} />
               <Route exact path='/home' element={<Home />} />
               <Route exact path='/addOrEditNotes' element={<AddOrEditNotes />} />
               <Route exact path='/mynotes' element={<MyNotes />} />
               <Route exact path='/news' element={<News />} />
-              <Route exact path='/' element={<Login />} />
+                <Route exact path='/login' element={<Login />} />
                 <Route exact path='/syllabus' element={<Syllabus />} />
               <Route exact path='/pdfread' element={<Pdfread />} />
               <Route exact path='/register' element={<Register />} />
@@ -57,9 +60,9 @@ function App() {
             <Route exact path='/editcourses' element={<EditCourses />} />
             <Route exact path='/addcontent' element={<AddContent />} />
       </Routes>
-            <Maybeshow>
-      <Footer />
-            </Maybeshow>
+              <ShowFooter>
+                <Footer />
+              </ShowFooter>
           </NoteState>
         </SubState>
       </Authstate>

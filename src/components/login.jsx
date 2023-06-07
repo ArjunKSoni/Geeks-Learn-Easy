@@ -28,7 +28,7 @@ export default function Login() {
                 <img src="favicon.png" alt="" width={"32px"} height={"32px"} />
                 <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
             </div>
-            <div className="container6">
+            <div className="container6 no-scrollbar">
                 <div className="form6">
                     <div className="btn6">
                         <button className="loginBtn6">LOG IN</button>

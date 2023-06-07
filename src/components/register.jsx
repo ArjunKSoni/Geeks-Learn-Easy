@@ -35,18 +35,18 @@ export default function Register() {
     }
 
     return (
-        <div className='home min-h-screen bodyregister text-white'>
+        <div className='home h-screen overflow-scroll no-scrollbar bodyregister text-white'>
             {redirect === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col absolute top-0 bottom-0 h-full w-full items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap justify-center mr-10'>
                 <img src="favicon.png" alt="" width={"32px"} height={"32px"} />
                 <h3 className='text-white font-bold text-xl'>Geeks Learn Easy</h3>
             </div>
-            <div className="container6">
+            <div className="container6  no-scrollbar">
                 <div className="form6">
                     <div className="btn6">
                         <button className="loginBtn6">Just few things more...</button>
                     </div>
-                    <form className="login6" action="" method="get">
+                    <form className="" action="" method="get">
 
                         <div className="formGroup6">
                             <input type="number" placeholder="Year" name='year' onChange={detailchange} required autoComplete="off" />
@@ -76,7 +76,7 @@ export default function Register() {
                             })}
                         </div>
                         <div className="formGroup6">
-                            <button onClick={onRegister} type="submit" className="btn26">SUBMIT</button>
+                            <button onClick={onRegister} type="submit" className="btn26 mb-2">SUBMIT</button>
                         </div>
                     </form>
                 </div>

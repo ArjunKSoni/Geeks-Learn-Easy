@@ -61,7 +61,7 @@ export default function Signup() {
                             <button onClick={signup} type="submit" className="btn26">Register</button>
                         </div>
                         <div className="checkBox6">
-                            <div className="text6" id="checkbox6">Aldready have an account? <Link to={"/"} style={{ color: "rgb(134, 230, 209)" }}>Login</Link></div>
+                            <div className="text6" id="checkbox6">Aldready have an account? <Link to={"/login"} style={{ color: "rgb(134, 230, 209)" }}>Login</Link></div>
                         </div>
                     </form>
                 </div>
