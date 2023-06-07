@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Intro() {
     return (
@@ -10,8 +11,8 @@ export default function Intro() {
                     </div>
                     <div className="options9">
                         <div className="btn9 flex flex-row gap-3">
-                            <input type="button" value="Sign In" />
-                            <input type="button" value="Sign Up" />
+                            <Link to={"/login"}><input type="button" value="Sign In" /></Link>
+                            <Link to={"/signup"}><input type="button" value="Sign Up" /></Link>
                         </div>
                     </div>
                 </div>
@@ -27,7 +28,7 @@ export default function Intro() {
                             adipisci ex nemo perspiciatis soluta ab quod ullam!
                         </div>
                         <div className="btn9">
-                            <input type="button" value="Register" />
+                            <Link to={"/signup"}><input type="button" value="Register" /></Link>
                         </div>
                     </div>
                     <div className="illu">
