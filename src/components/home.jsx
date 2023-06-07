@@ -6,6 +6,7 @@ import Authcontext from '../context/authContext'
 import Newscontext from '../context/newsContext'
 import { useEffect } from 'react'
 import Notecontext from '../context/noteContext'
+import desc from '../extraGenerator/desc'
 
 export default function Home() {
     const { fetchData } = useContext(Newscontext)
@@ -33,7 +34,7 @@ export default function Home() {
                 <div style={Theme[theme].homeCont} className="container2">
                     {subj.length === 0 && <div className='flex flex-col p-16 items-center justify-center' style={{ height: "50vh" }}><img width={"50px"} height={"50px"} src="load.gif" alt="" />Go to profile to add courses</div>}
                     {subj.map((e, i) => {
-                        return <HomeSubject key={i} colour={colour[i % 10]} name={e} desc={"desc here"} />
+                        return <HomeSubject key={i} colour={colour[i % 10]} name={e} desc={desc[0][e]} />
                     })}
                 </div>
             </div>
