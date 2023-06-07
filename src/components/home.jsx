@@ -5,14 +5,17 @@ import Theme from '../extraGenerator/theme'
 import Authcontext from '../context/authContext'
 import Newscontext from '../context/newsContext'
 import { useEffect } from 'react'
+import Notecontext from '../context/noteContext'
 
 export default function Home() {
     const { fetchData } = useContext(Newscontext)
     const { theme, profile } = useContext(Authcontext);
     const { subj } = useContext(Subcontext)
+    const { fetchNotes } = useContext(Notecontext)
 
     useEffect(() => {
         fetchData();
+        fetchNotes()
     }, [])
 
     const desc = { "DBMS": "Database Management System", "CNP": "Computer Network and Protocols", "Oops": "Object oriented programming", "Sensor_Technology": "Sensors", "Technical_English": "Basic English" }
