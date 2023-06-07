@@ -21,15 +21,15 @@ export default function Home() {
                             <div style={{ backgroundColor: colour[0] }} className="title2 text-2xl font-bold h-2/4 flex items-center justify-between px-7">Notes <img src="notes.webp" alt="notes" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all notes at one place topicwise</div>
                     </Link>
-                    <Link style={Theme[theme].boxDown} to="/pdfread" state={{ item: pyq }} className="box2 m-4">
+                    <Link style={Theme[theme].boxDown} to="/pyqRead" state={{ item: pyq }} className="box2 m-4">
                             <div style={{ backgroundColor: colour[3] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">PYQ <img src="pyq2.webp" alt="pyq" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all the previous year questions at one place</div>
                     </Link>
-                    <Link style={Theme[theme].boxDown} to="/pdfread" state={{ impQues }} className="box2 m-4">
+                    <Link style={Theme[theme].boxDown} to="/pdfReadImp" state={{ item: impQues }} className="box2 m-4">
                             <div style={{ backgroundColor: colour[2] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Important Questions <img src="ques1.png" alt="Ques" width="90rem" height="90rem" /></div>
                         <div className="sub2 flex text-center  h-2/4 items-center justify-center">Get all the important questions at one place</div>
                     </Link>
-                    <Link style={Theme[theme].boxDown} to="/syllabus" state={{ sylla }} className="box2 m-4">
+                    <Link style={Theme[theme].boxDown} to="/syllabus" state={{ item: sylla }} className="box2 m-4">
                         <div style={{ backgroundColor: colour[5] }} className="title2 h-2/4 text-2xl font-bold flex items-center justify-between px-7">Syllabus <img src="syllabus2.png" alt="note" width="90rem" height="90rem" /></div>
                         <div className="sub2 text-center flex h-2/4 items-center justify-center">Know your syllabus</div>
                     </Link>

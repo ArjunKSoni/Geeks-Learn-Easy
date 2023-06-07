@@ -81,9 +81,11 @@ const SubState = (props) => {
             let data = await apicall.json()
             setNotes(data.subjects[0][e][0].Notes)
             setImpq(data.subjects[0][e][2].ImpQuestions)
-            setpyq(data.subjects[0][e][1].pyqs)
+            setpyq(data.subjects[0][e][1])
             setsylla(data.subjects[0][e][3].syllabus)
-            // console.log(data.subjects[0][e][3]);
+            // console.log(data.subjects[0][e][2].ImpQuestions[0]["imp1"]);
+            console.log(data.subjects[0][e][3].syllabus);
+            // console.log(data.subjects[0][e][1].pyqs[0]["pyq1"]);
             // serRender(false)
             if (data.success === "fail") { alert(data.message) }
         } catch (error) {

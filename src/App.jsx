@@ -30,6 +30,8 @@ import Newsstate from "./context/newsState";
 import Syllabus from "./components/syllabus";
 import Intro from "./components/intro";
 import ShowFooter from "./extraGenerator/showFooter";
+import PyqRead from "./components/pdfreadPYQ";
+import PdfReadImp from "./components/pdfReadImp";
 
 function App() {
   return (
@@ -51,7 +53,9 @@ function App() {
               <Route exact path='/addOrEditNotes' element={<AddOrEditNotes />} />
               <Route exact path='/mynotes' element={<MyNotes />} />
               <Route exact path='/news' element={<News />} />
+                <Route exact path='/pyqRead' element={<PyqRead />} />
                 <Route exact path='/login' element={<Login />} />
+                <Route exact path='/pdfReadImp' element={<PdfReadImp />} />
                 <Route exact path='/syllabus' element={<Syllabus />} />
               <Route exact path='/pdfread' element={<Pdfread />} />
               <Route exact path='/register' element={<Register />} />
