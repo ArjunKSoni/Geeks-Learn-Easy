@@ -68,7 +68,14 @@ ul li:hover .effecth {
   overflow: hidden;
 }
 .contentSidebar {
-  display: none;
+  position: absolute;
+    left: -180px;
+    transition: all 0.3s;
+    width: 200px !important;
+  }
+  
+  .contentSidebar:hover {
+    left: 0px;
 }
 }
 
