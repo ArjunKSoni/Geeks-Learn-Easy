@@ -27,7 +27,7 @@ const SubState = (props) => {
                     }, body: JSON.stringify({ uid: token }),
                 })
                 let data = await apicall.json()
-                // setsub(data.subjects.subjects)
+                setsub(data.subjects.subjects)
                 console.log(data);
                 if (data.success === "fail") { alert(data.message) }
             } else { navigate("/") }

@@ -17,3 +17,4 @@ const desc = [
         "Technical Communication": "Communication of technical subject matter such as engineering"
     }
 ]
+export default desc
