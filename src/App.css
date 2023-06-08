@@ -69,9 +69,9 @@ ul li:hover .effecth {
 }
 .contentSidebar {
   position: absolute;
-    left: -180px;
+    left: -210px;
     transition: all 0.3s;
-    width: 200px !important;
+    width: 230px !important;
   }
   
   .contentSidebar:hover {

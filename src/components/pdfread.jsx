@@ -17,7 +17,8 @@ export default function Pdfread() {
     return (
         <div className="flex h-screen">
             {/* <div className={`absolute bg-black readpdf text-white transition-all text-3xl top-4 left-1 rounded-full p-3`}><BsArrowBarRight /></div> */}
-            <div><div style={Theme[theme].bodydesc2} className="contentSidebar p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div className='h-full'><div style={Theme[theme].bodydesc2} className="contentSidebar p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+                <ul style={Theme[theme].bodydesc2} className='navButton'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white  hover:${Theme[theme].newdescHover}`}>hide</h1></ul>
                 {item.map((e, i) => {
                     return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white  hover:${Theme[theme].newdescHover}`}>{`Unit ${i + 1}`}</h1>
                         {e[`unit${i + 1}`].map((q, j) => {
