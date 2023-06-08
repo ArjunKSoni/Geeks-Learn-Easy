@@ -5,7 +5,6 @@ import Authcontext from '../context/authContext'
 import { Link, useLocation } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 import { useEffect } from 'react'
-import { BsArrowBarRight } from 'react-icons/bs';
 
 export default function Pdfread() {
     const location = useLocation()

@@ -18,7 +18,7 @@ export default function PdfReadImp() {
     }, [])
     return (
         <div className="flex h-screen">
-            <div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><BsArrowBarRight /></div>
+            {/* <div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><BsArrowBarRight /></div> */}
             <div style={Theme[theme].bodydesc2} className="contentSidebar p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.map((e, i) => {
                     return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
