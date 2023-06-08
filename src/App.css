@@ -376,7 +376,7 @@ input:focus {
   border-bottom: 2px solid rgb(91, 243, 131);
   font-size: 17px;
   font-weight: bold;
-  color: white;
+  color: gray;
 }
 
 
