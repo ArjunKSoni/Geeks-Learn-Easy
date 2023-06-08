@@ -4,7 +4,7 @@ const Newsstate = (props) => {
 
     const [news, setNews] = useState([])
     const fetchData = async () => {
-        const apicall = await fetch(`https://gle-news.onrender.com/news?category=education`, {
+        const apicall = await fetch(`https://glenews.onrender.com/api/education`, {
             method: 'GET',
             headers: {
                 "Content-Type": "application/json"

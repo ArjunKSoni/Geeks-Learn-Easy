@@ -65,7 +65,6 @@ export default function Register() {
                         <div className="formGroup6">
                             <select name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
                                 <option disabled hidden >Select Subject</option>
-                                <option value="DBMS">DBMS</option>
                                 {sublist.map((e) => {
                                     return <option value={e}>{e}</option>
                                 })}

@@ -25,15 +25,13 @@ export default function Intro() {
                     <div className="content9">
                         <div className="heading9">
                             <h1>Geeks Learn Easy</h1>
-                            <h3>It's your Learning Partner</h3>
+                            <h3>A comprehensive platform for students to make learning easy</h3>
                         </div>
                         <div className="para9">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Provident iure perferendis repellendus
-                            adipisci ex nemo perspiciatis soluta ab quod ullam!
+                            Start your educational journey with us today! Explore our resources, join our vibrant community, and unlock your full potential. Together, let's embrace the joy of learning and empower ourselves for a brighter future.
                         </div>
                         <div className="btn9">
-                            <Link to={"/signup"}><div style={{ width: "95px" }} className='link'>Register"</div></Link>
+                            <Link to={"/signup"}><div style={{ width: "95px" }} className='link'>Register</div></Link>
                         </div>
                     </div>
                     <div className="illu">

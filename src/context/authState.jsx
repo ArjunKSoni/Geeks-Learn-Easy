@@ -51,7 +51,7 @@ const Authstate = (props) => {
                 setredirect(false)
                 if (data.success === "fail") { alert(data.message); navigate("/") }
                 else (navigate("/profile"))
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }

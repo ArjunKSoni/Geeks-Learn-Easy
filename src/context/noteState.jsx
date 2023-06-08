@@ -22,7 +22,7 @@ const NoteState = (props) => {
                 editNote(data.notes)
                 serRender(false)
                 if (data.success === "fail") { alert(data.message) }
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }
@@ -43,7 +43,7 @@ const NoteState = (props) => {
                 if (data.success === "fail") { alert(data.message) }
                 fetchNotes()
                 navigate("/mynotes")
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }
@@ -63,7 +63,7 @@ const NoteState = (props) => {
                 serRender(false)
                 if (data.success === "fail") { alert(data.message); navigate("/mynotes") }
                 else { fetchNotes(); navigate("/mynotes") }
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }
@@ -82,7 +82,7 @@ const NoteState = (props) => {
                 serRender(false)
                 if (data.success === "fail") { alert(data.message) }
                 fetchNotes();
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }

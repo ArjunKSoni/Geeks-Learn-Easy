@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import Subcontext from "./subContext"
 import { useContext } from "react";
 import Authcontext from "./authContext";
+import { useNavigate } from "react-router-dom";
 
 const SubState = (props) => {
+    const navigate = useNavigate()
     const [subj, setsub] = useState([])
     const [sublist, setsublist] = useState([]);
     const [hide, sethide] = useState(false);
@@ -17,7 +19,6 @@ const SubState = (props) => {
     const findmysubjects = async () => {
         try {
             if (token) {
-                // serRender(true)
                 const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/findmysubjects`, {
                     method: 'POST',
                     headers: {
@@ -26,17 +27,14 @@ const SubState = (props) => {
                 })
                 let data = await apicall.json()
                 setsub(data.subjects.subjects)
-                // if (data.subjects.length === 0) setsub([])
-                // serRender(false)
                 if (data.success === "fail") { alert(data.message) }
-            } else { alert("UnAuthorised Access") }
+            } else { navigate("/") }
         } catch (error) {
             console.log(error);
         }
     }
     const addsubjects = async (k) => {
         try {
-            // serRender(true)
             const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/addsubjects`, {
                 method: 'POST',
                 headers: {
@@ -44,7 +42,6 @@ const SubState = (props) => {
                 }, body: JSON.stringify({ uid: token, subj: k }),
             })
             let data = await apicall.json()
-            // serRender(false)
             if (data.success === "fail") { alert(data.message) }
 
         } catch (error) {
@@ -53,7 +50,6 @@ const SubState = (props) => {
     }
     const getallsubjects = async () => {
         try {
-            // serRender(true)
             const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/getallsubjects`, {
                 method: 'GET',
                 headers: {
@@ -63,7 +59,6 @@ const SubState = (props) => {
             let data = await apicall.json()
             setsublist(data.subjects)
             console.log(data.subjects);
-            // serRender(false)
             if (data.success === "fail") { alert(data.message) }
         } catch (error) {
             console.log(error);
@@ -71,7 +66,6 @@ const SubState = (props) => {
     }
     const getOnesubjectClick = async (e) => {
         try {
-            // serRender(true)
             const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/getOnesubjectClick`, {
                 method: 'POST',
                 headers: {
@@ -83,10 +77,6 @@ const SubState = (props) => {
             setImpq(data.subjects[0][e][2].ImpQuestions)
             setpyq(data.subjects[0][e][1])
             setsylla(data.subjects[0][e][3].syllabus)
-            // console.log(data.subjects[0][e][2].ImpQuestions[0]["imp1"]);
-            console.log(data.subjects[0][e][3].syllabus);
-            // console.log(data.subjects[0][e][1].pyqs[0]["pyq1"]);
-            // serRender(false)
             if (data.success === "fail") { alert(data.message) }
         } catch (error) {
             console.log(error);
