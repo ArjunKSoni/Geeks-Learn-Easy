@@ -11,7 +11,7 @@ const Newsstate = (props) => {
             }
         });
         const data = await apicall.json();
-        const parse = await data.data;
+        const parse = await data;
         setNews(parse);
     }
 
