@@ -13,8 +13,8 @@ const desc = [
         "AI": "Artificial Intelligence",
         "IPS": "Introduction to Probability and Statistics",
         "Soft Computing": "Set of algorithms, including neural networks",
-        "Software Engineering": "Engineering-based approach to software development.",
-        "Technical Communication": "Technical communication is communication of technical subject matter such as engineering"
+        "Software Engineering": "Engineering-based approach to software development",
+        "Technical Communication": "Communication of technical subject matter such as engineering"
     }
 ]
 export default desc
