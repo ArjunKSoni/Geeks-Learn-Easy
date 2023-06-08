@@ -69,11 +69,11 @@ ul li:hover .effecth {
 }
 .contentSidebar {
   position: absolute;
-    left: -210px;
+  padding-top: 30px;
+    left: -230px;
     transition: all 0.3s;
-    width: 230px !important;
-  }
-  
+    width: 250px !important;
+    }
   .contentSidebar:hover {
     left: 0px;
 }

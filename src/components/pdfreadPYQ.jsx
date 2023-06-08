@@ -5,6 +5,7 @@ import Authcontext from '../context/authContext'
 import { Link, useLocation } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 import { useEffect } from 'react'
+import { ImCross } from 'react-icons/im';
 // import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 export default function PyqRead() {
@@ -18,7 +19,7 @@ export default function PyqRead() {
     return (
         <div className="flex h-screen">
             {/* <Link to={"/subject"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><AiOutlineArrowLeft /></div></Link> */}
-            <div style={Theme[theme].bodydesc2} className="contentSidebar p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div style={Theme[theme].bodydesc2} className="contentSidebar  p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.pyqs.map((e, i) => {
                     return (
                         <ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
@@ -26,7 +27,9 @@ export default function PyqRead() {
                     </ul>
                     )
                 })}
+                {/* <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul> */}
             </div>
+            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton none xcross absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul>
             <Pdf />
         </div>
     )

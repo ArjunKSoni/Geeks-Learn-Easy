@@ -5,7 +5,7 @@ import Authcontext from '../context/authContext'
 import { Link, useLocation } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 import { useEffect } from 'react'
-import { BsArrowBarRight } from 'react-icons/bs';
+import { ImCross } from 'react-icons/im';
 
 export default function PdfReadImp() {
     const location = useLocation()
@@ -19,7 +19,7 @@ export default function PdfReadImp() {
     return (
         <div className="flex h-screen">
             {/* <div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><BsArrowBarRight /></div> */}
-            <div style={Theme[theme].bodydesc2} className="contentSidebar p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.map((e, i) => {
                     return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
                         <input readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item[i][`imp${i + 1}`]) }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`} value={`imp${i + 1}`} />
@@ -28,6 +28,7 @@ export default function PdfReadImp() {
                     // { console.log(e); }
                 })}
             </div>
+            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul>
             <Pdf />
         </div>
     )
