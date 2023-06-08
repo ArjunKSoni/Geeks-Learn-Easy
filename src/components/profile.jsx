@@ -16,7 +16,7 @@ export default function Profile() {
     return (
         <div style={Theme[theme].textbg} className='h-screen overflow-scroll no-scrollbar'>
             {hide && <EditCourses />}
-            <Link to={"/home"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><FaHome /></div></Link>
+            <Link to={"/home"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-xl top-4 left-4 rounded-full p-3`}><FaHome /></div></Link>
             <div className="wrapper3">
                 <div style={Theme[theme].profile} className="left3">
                     <img src="profile.png" alt="user" width="100" />
@@ -27,6 +27,7 @@ export default function Profile() {
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
+                    <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/about") }} className='px-2 py-1 mt-2 rounded bg-gray-800' id="log-out3">About</button>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">
                     <div className="info3">
