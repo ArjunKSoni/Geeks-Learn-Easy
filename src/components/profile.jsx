@@ -49,8 +49,6 @@ export default function Profile() {
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Branch</h4>
                                     <p>{profile.branch}</p>
-                                    <h4 className='font-bold text-lg'>Courses</h4>
-                                    <p>DBMS,CNP</p>
                                 </div>
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Year</h4>

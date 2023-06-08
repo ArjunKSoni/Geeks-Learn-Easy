@@ -60,8 +60,6 @@ export default function ProfileEdit() {
                                 <div className="data3">
                                     <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Branch <BsPencilSquare /></h4>
                                     <input style={{ width: "100%" }} onChange={changed} type='text' defaultValue={profile.branch} name='branch' className=' bg-transparent '></input>
-                                    <h4 className='font-bold text-lg'>Courses</h4>
-                                    <p>DBMS,CNP</p>
                                 </div>
                                 <div className="data3">
                                     <h4 className='font-bold text-lg flex items-center justify-start gap-2'>Year <BsPencilSquare /></h4>

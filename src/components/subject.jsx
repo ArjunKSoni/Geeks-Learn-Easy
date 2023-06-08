@@ -6,7 +6,7 @@ import Subcontext from '../context/subContext'
 
 export default function Home() {
     const { theme } = useContext(Authcontext)
-    const { notes, pyq, impQues, sylla } = useContext(Subcontext)
+    const { notes, pyq, impQues, sylla, subname } = useContext(Subcontext)
     const { state } = useLocation();
     const colour = ["rgb(61, 240, 91)", "#2FCED8", "#C02FD8", "#882caf", "#0adb73", "#b21525", "#572ed1", "#325d3d", "#1198a2", "#98a211"]
 
@@ -14,7 +14,7 @@ export default function Home() {
         <div style={Theme[theme].textbg} className=' h-fit'>
             <div className="body2">
                 <div className="head2 py-5 text-xl">
-                    <h1><span className="font-bold">{state.name}</span></h1>
+                    <h1><span className="font-bold">{subname}</span></h1>
                 </div>
                 <div style={Theme[theme].homeCont} className="container2">
                     <Link style={Theme[theme].boxDown} to="/pdfread" state={{ item: notes }} className="box2 m-4">
