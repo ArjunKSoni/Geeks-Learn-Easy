@@ -67,16 +67,15 @@ ul li:hover .effecth {
   display: flex;
   overflow: hidden;
 }
+}
 .contentSidebar {
   position: absolute;
-  padding-top: 30px;
     left: -230px;
     transition: all 0.3s;
     width: 250px !important;
     }
   .contentSidebar:hover {
     left: 0px;
-}
 }
 
 .widthbody {
@@ -188,6 +187,9 @@ ul li:hover .effecth {
   .sub2 {
     padding: 1rem;
   }
+.xhide h1 {
+  display: none;
+}
 }
 
 @media (max-width:450px) {
@@ -197,6 +199,25 @@ ul li:hover .effecth {
     .myNotesWidth {
       width: 300px;
     }
+.xhide h1 {
+  display: block;
+  width: 200px;
+  transition: all 0.6s;
+  margin-top: 2px;
+}
+
+.xhide {
+  left: -200px;
+}
+
+.contentSidebar {
+  padding-top: 30px;
+}
+
+.contentSidebar:hover~.xhide {
+  transition: all 0.6s;
+  left: 0px;
+}
 }
 
 /* page 2 */
@@ -276,7 +297,7 @@ ul li:hover .effecth {
     flex-direction: column;
     width: 90vw;
   }
-
+        
   .img-left img {
     width: 100%;
     border-radius: 0;
@@ -307,6 +328,7 @@ ul li:hover .effecth {
   height: 100%;
 }
 
+
 .form6 {
   width: 350px;
   min-height: 450px;
@@ -321,16 +343,14 @@ ul li:hover .effecth {
     height: fit-content;
   box-shadow: 0 20px 30px black;
 }
-.navButton input {
+.navButton div {
   background-color: #000;
   margin: 5px;
+  width: 80%;
   cursor: pointer;
 }
-
-.navButton input:focus {
-  width: 90%;
-  text-decoration: none;
-  background-color: green;
+.navButton h1 {
+  width: 100px
 }
 
 .btn6 button {

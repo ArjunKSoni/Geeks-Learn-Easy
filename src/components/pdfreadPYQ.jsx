@@ -23,13 +23,13 @@ export default function PyqRead() {
                 {item.pyqs.map((e, i) => {
                     return (
                         <ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
-                            <input readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item.pyqs[i][`pyq${i + 1}`]); }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`} value={`pyq${i + 1}`} />
+                            <div readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item.pyqs[i][`pyq${i + 1}`]); }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>{`pyq${i + 1}`} </div>
                     </ul>
                     )
                 })}
                 {/* <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul> */}
             </div>
-            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton none xcross absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
+            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='absolute xhide px-2 rounded-3xl'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             <Pdf />
         </div>
     )

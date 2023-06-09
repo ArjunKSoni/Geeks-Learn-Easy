@@ -22,12 +22,12 @@ export default function PdfReadImp() {
             <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-screen sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.map((e, i) => {
                     return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
-                        <input readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item[i][`imp${i + 1}`]) }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`} value={`imp${i + 1}`} />
+                        <div readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item[i][`imp${i + 1}`]) }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>{`imp${i + 1}`} </div>
                     </ul>
                     )
                 })}
             </div>
-            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
+            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='absolute xhide px-2 rounded-3xl'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             <Pdf />
         </div>
     )
