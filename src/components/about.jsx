@@ -104,7 +104,7 @@ export default function About() {
                         <div className="content99">
                             The two interface types found in the Geeks Learn Easy Application are as follows: <br />
                             1. User Interface: Users are able to view the home page of the Geeks Learn Easy application, browse and select subject and create their own important  notes  in  GLE, look for information about each subject , attempt the quiz’s, assignments for better learning , access GLE from anywhere and anytime, enhance their learning experience. <br />
-                            2. Admin Interface: The administrator is able to view the users’ information that was entered during sign-in  in  the database, can update the information and features ,add or remove items from the main display. <Link to="/doc">Read More</Link>
+                            2. Admin Interface: The administrator is able to view the users’ information that was entered during sign-in  in  the database, can update the information and features ,add or remove items from the main display. <Link to="/doc" className='text-blue-700'>Read More</Link>
                         </div>
                     </section>
                 </div>

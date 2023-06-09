@@ -32,6 +32,7 @@ import Intro from "./components/intro";
 import ShowFooter from "./extraGenerator/showFooter";
 import PyqRead from "./components/pdfreadPYQ";
 import PdfReadImp from "./components/pdfReadImp";
+import Doc from "./components/doc";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route exact path={`/content`} element={<Content />} />
           <Route exact path='/about' element={<About />} />
                 <Route exact path='/' element={<Intro />} />
+                <Route exact path='/doc' element={<Doc />} />
             <Route exact path='/profile' element={<Profile />} />
             <Route exact path='/profileEdit' element={<ProfileEdit />} />
               <Route exact path='/home' element={<Home />} />

@@ -537,7 +537,7 @@ input:focus {
   }
 
   .wrapper3 .left3 {
-    height: fit-content;
+    height: 50vh;
     width: 100%;
     /* background: linear-gradient(to bottom, #01dbdf, #07696b); */
   }

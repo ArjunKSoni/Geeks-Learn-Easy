@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
-import { FaHome } from 'react-icons/fa';
+import { FaHome, FaGithubSquare } from 'react-icons/fa';
+import { BsLinkedin } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import Authcontext from '../context/authContext';
 import Subcontext from '../context/subContext';
@@ -27,7 +28,7 @@ export default function Profile() {
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
-                    <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/about") }} className='px-2 py-1 mt-2 rounded bg-gray-800' id="log-out3">About</button>
+                    <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/about") }} className='px-2 py-1 mt-2 rounded bg-gray-800' id="log-out3">About us</button>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">
                     <div className="info3">
@@ -62,11 +63,11 @@ export default function Profile() {
                             <div className="projects_data3">
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Linkedin</h4>
-                                    <a href="profile.Linkedin" target='_blank'>Linkedin</a>
+                                    <div className='ml-4'><a href={profile.Linkedin} target='_blank'><BsLinkedin className='text-2xl' /></a></div>
                                 </div>
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Git hub</h4>
-                                    <a href="profile.github" target='_blank'>Github</a>
+                                    <div className='ml-4'><a href={profile.github} target='_blank'><FaGithubSquare className='text-2xl' /></a></div>
                                 </div>
                             </div>
                         </div>
