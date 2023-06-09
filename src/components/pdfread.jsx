@@ -44,7 +44,7 @@ export default function Pdfread() {
                         )
                     })}
                 </div>
-                <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='absolute xhide px-2 rounded-3xl'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
+                <ul style={{ backgroundColor: "black" }} className='absolute mb-3 top-14 xhide px-2 rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             </div>
             <Pdf />
         </div>

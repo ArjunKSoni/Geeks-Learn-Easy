@@ -23,7 +23,7 @@ export default function Syllabus() {
                 </ul>
                 {/* <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul> */}
             </div>
-            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='absolute xhide px-2 rounded-3xl'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
+            <ul style={{ backgroundColor: "black" }} className='absolute mb-3 top-16 xhide px-2 rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             <Pdf />
         </div>
     )

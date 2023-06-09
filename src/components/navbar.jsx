@@ -33,7 +33,7 @@ function Navbar() {
                 </div>
             </div >
             {/* *********************************************************************************************************** */}
-            <div className="nonres  z-10   p-2 bg-black items-center justify-center h-fit w-screen flex-wrap">
+            <div className="nonres  z-50   p-2 bg-black items-center justify-center h-fit w-screen flex-wrap">
                 <div className=" text4 items-center justify-center"><FiAlignJustify className="invert text-3xl " />
                     <div className="bg-gray-900 h-screen mt-5 sidebar text-white p-4 absolute">
                         <div className="w-full h-1 bg-green-500"></div>

@@ -200,23 +200,25 @@ ul li:hover .effecth {
       width: 300px;
     }
 .xhide h1 {
-  display: block;
-  width: 200px;
-  transition: all 0.6s;
+  display: none;
+    text-align: center;
+    width: 100vw;
+    transition: all 0.3s;
   margin-top: 2px;
 }
 
 .xhide {
-  left: -200px;
+  width: 100%;
+    height: 25px;
+    /* display: none */
 }
 
 .contentSidebar {
   padding-top: 30px;
 }
 
-.contentSidebar:hover~.xhide {
-  transition: all 0.6s;
-  left: 0px;
+.contentSidebar:hover~.xhide h1 {
+  display: block
 }
 }
 
