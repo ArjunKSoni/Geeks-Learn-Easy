@@ -51,7 +51,7 @@ export default function About() {
                             <div className="ananya">
                                 <div className="photo flex items-center justify-center"><img src="om.jpeg" alt="" /></div>
                                 <div className="info9">
-                                    Hi, I am Om Tiwari <br /> specialised in Django and ... persuing Btech from MITS, Gwalior in ITAIR 3rd year.
+                                    Hi, I am Om Tiwari <br /> I am a Full stack developer and data base analyst persuing Btech from MITS, Gwalior in ITAIR 3rd year.
                                 </div>
                             </div>
                             <div className="ananya">
@@ -102,9 +102,15 @@ export default function About() {
                     <section className="abt" id="doc-nav9">
                         <header>Documentaion</header>
                         <div className="content99">
-                            The two interface types found in the Geeks Learn Easy Application are as follows: <br />
-                            1. User Interface: Users are able to view the home page of the Geeks Learn Easy application, browse and select subject and create their own important  notes  in  GLE, look for information about each subject , attempt the quiz’s, assignments for better learning , access GLE from anywhere and anytime, enhance their learning experience. <br />
-                            2. Admin Interface: The administrator is able to view the users’ information that was entered during sign-in  in  the database, can update the information and features ,add or remove items from the main display. <Link to="/doc" className='text-blue-700'>Read More</Link>
+                            This is an education platform which provide easy notes and course syllabus to students
+                            of particular branch and college, Our aims to provide a comprehensive and interactive
+                            platform for learners of all ages and backgrounds. By providing easy content to students
+                            in combination of English and Hindi language.
+                            It offers a diverse range of educational resources, tools, and opportunities to support
+                            individuals in their pursuit of knowledge and personal growth. Such as we are providing
+                            quiz, assignments and handwritten notes so that students can also create and save their
+                            own important notes in application itself. which are crafted to engage learners and
+                            facilitate their understanding of complex concepts. <Link to="/doc" className='text-blue-700'>Read More</Link>
                         </div>
                     </section>
                 </div>
