@@ -42,7 +42,7 @@ export default function Footer() {
                     </div>
                     <div className='flex items-center justify-center '>
                         <FiMail className='text-xl mr-1 text-green-500' />
-                        <a href="mailto:arjunkumarsoni0520@gmail.com">feedback@geekslearneasy.org</a>
+                        <a href="mailto:geekslearneasy@gmail.com">geekslearneasy@gmail.com</a>
                     </div>
                 </div>
 
