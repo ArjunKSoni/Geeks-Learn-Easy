@@ -2,6 +2,7 @@ import { React, useContext } from "react";
 import Body from "./body";
 import Theme from "../extraGenerator/theme";
 import Authcontext from "../context/authContext";
+import { BiArrowFromRight } from 'react-icons/bi';
 
 function Content() {
     const { theme } = useContext(Authcontext);
@@ -41,6 +42,7 @@ function Content() {
                     <li className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`}>sub topic 4</li>
                 </ul>
             </div>
+            <ul style={{ backgroundColor: "black" }} className='absolute mb-3 top-16 xhide px-2 rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             <Body />
         </div>
     )
