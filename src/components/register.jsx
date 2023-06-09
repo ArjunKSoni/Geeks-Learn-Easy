@@ -37,7 +37,7 @@ export default function Register() {
     }
 
     return (
-        <div className='home h-screen overflow-scroll no-scrollbar bodyregister text-white'>
+        <div className='home h-screen bodyregister text-white'>
             {redirect === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col absolute top-0 bottom-0 h-full w-full items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <div className='relative gap-1 flex items-center flex-1 pt-5 h-fit flex-wrap justify-center mr-10'>
                 <img src="favicon.png" alt="" width={"32px"} height={"32px"} />
@@ -70,7 +70,7 @@ export default function Register() {
                                 })}
                             </select>
                         </div>
-                        <div className='flex flex-wrap gap-3 p-5' style={{ width: "350px" }}>
+                        <div className='flex flex-wrap gap-3 p-5 overflow-scroll no-scrollbar' style={{ width: "350px", height: "70px" }}>
                             {newsubj.map((e, i) => {
                                 return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setnewSubj(newsubj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
