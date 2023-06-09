@@ -5,7 +5,7 @@ import Authcontext from '../context/authContext'
 import { Link, useLocation } from 'react-router-dom'
 import Subcontext from '../context/subContext'
 import { useEffect } from 'react'
-import { ImCross } from 'react-icons/im';
+import { BiArrowFromRight } from 'react-icons/bi';
 // import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 export default function PyqRead() {
@@ -29,7 +29,7 @@ export default function PyqRead() {
                 })}
                 {/* <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul> */}
             </div>
-            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton none xcross absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><ImCross /></h1></ul>
+            <ul style={{ backgroundColor: "rgb(12, 12, 12)" }} className='navButton none xcross absolute px-2  rounded'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white`}><BiArrowFromRight /></h1></ul>
             <Pdf />
         </div>
     )
