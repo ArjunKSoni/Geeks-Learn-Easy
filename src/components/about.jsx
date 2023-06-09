@@ -73,19 +73,19 @@ export default function About() {
                         <div className="content99">
                             <div className="step pb-9">
                                 <div className="detail">Step 1: Go to www.geekslearneasy.com in your Android device's web browser.</div>
-                                <div className="img-step"><img src="1.jpeg" alt="" /></div>
+                                <div className="img-step"><img src="1.jpg" alt="" /></div>
                             </div>
                             <div className="step pb-9">
                                 <div className="detail">Step 2: Open the browser's menu by tapping the three-dot icon or similar in the top-right corner of the browser window.</div>
-                                <div className="img-step"><img src="2.jpeg" alt="" /></div>
+                                <div className="img-step"><img src="2.jpg" alt="" /></div>
                             </div>
                             <div className="step pb-9">
                                 <div className="detail">Step 3: Look for "Install App". The wording may vary depending on the browser you're using. Tap the option.</div>
-                                <div className="img-step"><img src="3.jpeg" alt="" /></div>
+                                <div className="img-step"><img src="3.jpg" alt="" /></div>
                             </div>
                             <div className="step pb-9">
                                 <div className="detail">Step 4: A prompt will appear asking you to confirm the installation. Tap "Install". The browser will create an app shortcut on your home screen or app drawer.</div>
-                                <div className="img-step"><img src="4.jpeg" alt="" /></div>
+                                <div className="img-step"><img src="4.jpg" alt="" /></div>
                             </div>
                             <div className="step pb-9">
                                 <div className="detail">Step 5: Now you can access the  GLE website app easily.
