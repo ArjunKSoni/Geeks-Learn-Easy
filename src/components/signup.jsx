@@ -29,7 +29,7 @@ export default function Signup() {
         e.preventDefault();
         if (EmailVal(newuser.email.trim()) !== true) alert("Invalid Email")
         else if (newuser.user.trim() === "") alert("User can't be empty ")
-        else if (newuser.mobile.trim() === "") alert("Mobile can't be empty")
+        else if (newuser.mobile.trim() === "" || newuser.mobile.trim().length !== 10) alert("Invalid Mobile")
         else if (newuser.password.trim() === "") alert("Fill the password ")
         else {
             setregister(newuser);

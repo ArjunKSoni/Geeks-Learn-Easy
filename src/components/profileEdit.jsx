@@ -27,7 +27,7 @@ export default function ProfileEdit() {
 
     return (
         <div style={Theme[theme].textbg} className='h-screen overflow-scroll no-scrollbar'>
-            {redirect === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col absolute top-0 bottom-0 h-screen w-full items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
+            {redirect === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col z-50 absolute top-0 bottom-0 w-screen items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <Link to={"/home"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><FaHome /></div></Link>
             <form className="wrapper3">
                 <div style={Theme[theme].profile} className="left3">

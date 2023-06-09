@@ -17,9 +17,9 @@ export default function PyqRead() {
         setreadpdf(item.pyqs[0]["pyq1"])
     }, [])
     return (
-        <div className="flex h-screen">
+        <div className="flex">
             {/* <Link to={"/subject"}><div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><AiOutlineArrowLeft /></div></Link> */}
-            <div style={Theme[theme].bodydesc2} className="contentSidebar  p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div style={Theme[theme].bodydesc2} className="contentSidebar  p-3 min-h-screen sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.pyqs.map((e, i) => {
                     return (
                         <ul key={i} style={Theme[theme].bodydesc2} className='navButton'>

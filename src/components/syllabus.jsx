@@ -16,8 +16,8 @@ export default function Syllabus() {
         setreadpdf(item)
     }, [])
     return (
-        <div className="flex h-screen">
-            <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+        <div className="flex">
+            <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-screen sideDec no-scrollbar border-r-4 overflow-x-auto">
                 <ul style={Theme[theme].bodydesc2} className='navButton'>
                     {<input readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item) }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`} value={`Syllabus`} />}
                 </ul>

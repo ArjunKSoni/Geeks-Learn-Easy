@@ -16,9 +16,9 @@ export default function Pdfread() {
         setreadpdf(item[0]["unit1"][0]["pdf1"])
     }, [])
     return (
-        <div className="flex h-screen">
+        <div className="flex">
             {/* <div className={`absolute bg-black readpdf text-white transition-all text-3xl top-4 left-1 rounded-full p-3`}><BsArrowBarRight /></div> */}
-            <div className='h-full flex'>
+            <div className='h-screen flex'>
                 <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
                     {item.map((e, i) => {
                         return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'> <h1 className={`p-1 px-2 text-xl text-white rounded-xl font-bold hover:text-white  hover:${Theme[theme].newdescHover}`}>{`Unit ${i + 1}`}</h1>

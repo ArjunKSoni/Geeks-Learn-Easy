@@ -23,7 +23,7 @@ const Authstate = (props) => {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
-                }, body: JSON.stringify({ user: regis.user, email: regis.email, password: regis.password, mobileNo: regis.mobile, year: reg.year, branch: reg.branch, Linkedin: reg.Linkedin, github: reg.github, clg: "Type Your college name" }),
+                }, body: JSON.stringify({ user: regis.user, email: regis.email, password: regis.password, mobileNo: regis.mobile, year: reg.year, branch: reg.branch, Linkedin: "Linkedin", github: "Github", clg: "Type Your college name" }),
             })
             let data = await apicall.json()
             setToken(data.authToken)

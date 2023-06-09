@@ -62,11 +62,11 @@ export default function Profile() {
                             <div className="projects_data3">
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Linkedin</h4>
-                                    <div className='ml-4'><a href={profile.Linkedin} target='_blank'><BsLinkedin className='text-2xl' /></a></div>
+                                    <div className='ml-4'>{profile.Linkedin}</div>
                                 </div>
                                 <div className="data3">
                                     <h4 className='font-bold text-lg'>Git hub</h4>
-                                    <div className='ml-4'><a href={profile.github} target='_blank'><FaGithubSquare className='text-2xl' /></a></div>
+                                    <div className='ml-4'>{profile.github}</div>
                                 </div>
                             </div>
                         </div>

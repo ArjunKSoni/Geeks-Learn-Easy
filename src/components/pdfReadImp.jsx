@@ -17,9 +17,9 @@ export default function PdfReadImp() {
         // setreadpdf(item.pyqs[0]["pyq1"])
     }, [])
     return (
-        <div className="flex h-screen">
+        <div className="flex ">
             {/* <div style={Theme[theme].bgtext} className={`absolute transition-all text-3xl top-4 left-4 rounded-full p-3`}><BsArrowBarRight /></div> */}
-            <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-full sideDec no-scrollbar border-r-4 overflow-x-auto">
+            <div style={Theme[theme].bodydesc2} className="contentSidebar pt-8 p-3 min-h-screen sideDec no-scrollbar border-r-4 overflow-x-auto">
                 {item.map((e, i) => {
                     return (<ul key={i} style={Theme[theme].bodydesc2} className='navButton'>
                         <input readOnly={true} onClick={(e) => { e.currentTarget.focus(); setreadpdf(item[i][`imp${i + 1}`]) }} className={` ml-3 p-1 px-2 text-gray-500 rounded-xl hover:text-white hover:${Theme[theme].newdescHover}`} value={`imp${i + 1}`} />

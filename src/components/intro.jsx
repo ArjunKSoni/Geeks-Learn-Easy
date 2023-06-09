@@ -25,7 +25,7 @@ export default function Intro() {
                     <div className="content9">
                         <div className="heading9">
                             <h1>Geeks Learn Easy</h1>
-                            <h3>A comprehensive platform for students to make learning easy</h3>
+                            <h3 className='para9'>A comprehensive platform for students to make learning easy</h3>
                         </div>
                         <div className="para9">
                             Start your educational journey with us today! Explore our resources, join our vibrant community, and unlock your full potential. Together, let's embrace the joy of learning and empower ourselves for a brighter future.

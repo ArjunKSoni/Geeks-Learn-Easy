@@ -7,14 +7,19 @@ export default function Register() {
     const { subj, setsub, addsubjects } = useContext(Subcontext)
     const [newsubj, setnewSubj] = useState([])
     const { sublist } = useContext(Subcontext);
+    const [years, setyears] = useState([]);
     const [details, setdet] = useState({
         year: "",
         branch: "",
-        Linkedin: "",
-        github: ""
+        Linkedin: "Linkedin",
+        github: "Github"
     })
+    const d = new Date();
+
     useEffect(() => {
         setnewSubj(subj)
+        let year = parseInt(d.getFullYear());
+        setyears([year - 2, year - 1, year, year + 1, year + 2, year + 3, year + 4, year + 5])
     }, [])
     const detailchange = (e) => {
         setdet({ ...details, [e.target.name]: e.target.value })
@@ -49,18 +54,16 @@ export default function Register() {
                         <button className="loginBtn6">Just few things more...</button>
                     </div>
                     <form className="" action="" method="get">
-
-                        <div className="formGroup6">
-                            <input type="number" placeholder="Year" name='year' onChange={detailchange} required autoComplete="off" />
-                        </div>
-                        <div className="formGroup6">
+                        <div className="formGroup6 mt-5">
                             <input type="text" name="branch" onChange={detailchange} placeholder="Branch" required autoComplete="off" />
                         </div>
-                        <div className="formGroup6">
-                            <input type="text" name="Linkedin" onChange={detailchange} placeholder="Linkedin Profile" required autoComplete="off" />
-                        </div>
-                        <div className="formGroup6">
-                            <input type="text" name="github" onChange={detailchange} placeholder="Github Profile" required autoComplete="off" />
+                        <div className="formGroup6 mb-10 ">
+                            <select name="year" defaultValue='Select Graduation Year' id="year" required onChange={detailchange} className=''>
+                                <option disabled hidden >Select Graduation Year</option>
+                                {years.map((e) => {
+                                    return <option value={e}>{e}</option>
+                                })}
+                            </select>
                         </div>
                         <div className="formGroup6">
                             <select name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
@@ -75,6 +78,7 @@ export default function Register() {
                                 return <button className='bg-gray-600 p-1 rounded flex items-center gap-2' value={e} key={i} onClick={(k) => { k.preventDefault(); setnewSubj(newsubj.filter(u => u !== k.target.value)) }}>{e}</button>
                             })}
                         </div>
+
                         <div className="formGroup6">
                             <button onClick={onRegister} type="submit" className="btn26 mb-2">SUBMIT</button>
                         </div>
