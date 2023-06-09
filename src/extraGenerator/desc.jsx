@@ -19,3 +19,4 @@ const desc = [
         "Sensor Technology":"Technology that uses sensors to acquire information"
     }
 ]
+export default desc
