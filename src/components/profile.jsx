@@ -28,7 +28,6 @@ export default function Profile() {
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
-                    <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/about") }} className='px-2 py-1 mt-2 rounded bg-gray-800' id="log-out3">About us</button>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">
                     <div className="info3">

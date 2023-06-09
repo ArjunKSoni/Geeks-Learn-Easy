@@ -18,6 +18,7 @@ function Navbar() {
                         <Link to={"/content"}><li className="hover:cursor-pointer"><div className='text-white flex py-2  gap-1 items-center justify-center font-bold'>GLE Notes</div></li></Link>
                         <Link to={"/mynotes"}><li className="hover:cursor-pointer"><div className='text-white flex py-2  gap-1 items-center justify-center font-bold'>My Notes</div></li></Link>
                         <Link to={"/news"}><li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>News</div></li></Link>
+                        <Link to={"/about"}><li className="hover:cursor-pointer"><div className='text-white py-2 flex gap-1 items-center justify-center font-bold'>About us</div></li></Link>
                     </ul>
                 </div>
 
@@ -42,6 +43,7 @@ function Navbar() {
                             <Link to={"/content"}><li className="p-1 px-5 my-3 hover:bg-gray-700">GLE Notes</li></Link>
                             <Link to={"/mynotes"}><li className="p-1 px-5 my-3 hover:bg-gray-700">My Notes</li></Link>
                             <Link to={"/news"}><li className="p-1 px-5 my-3 hover:bg-gray-700">News</li></Link>
+                            <Link to={"/about"}><li className="p-1 px-5 my-3 hover:bg-gray-700">About us</li></Link>
                         </ul>
                     </div>
                 </div>
