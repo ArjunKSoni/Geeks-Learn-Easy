@@ -28,7 +28,6 @@ const SubState = (props) => {
                 })
                 let data = await apicall.json()
                 setsub(data.subjects.subjects)
-                console.log(data);
                 if (data.success === "fail") { alert(data.message) }
             } else { navigate("/") }
         } catch (error) {
@@ -60,7 +59,6 @@ const SubState = (props) => {
             })
             let data = await apicall.json()
             setsublist(data.subjects)
-            console.log(data.subjects);
             if (data.success === "fail") { alert(data.message) }
         } catch (error) {
             console.log(error);

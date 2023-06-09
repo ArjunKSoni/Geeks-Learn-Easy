@@ -26,7 +26,6 @@ export default function EditCourses() {
                             <select style={{ width: "250px" }} name="cars" defaultValue='Select Subject' id="subject" required onChange={changed} className=''>
                                 <option disabled hidden >Select Subject</option>
                                 {sublist.map((e) => {
-                                    console.log(e);
                                     return <option value={e}>{e}</option>
                                 })}
                             </select>

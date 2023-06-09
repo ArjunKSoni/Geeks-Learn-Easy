@@ -7,8 +7,6 @@ import Authcontext from "../context/authContext";
 
 function Navbar() {
     const { theme, settheme } = useContext(Authcontext);
-    const { sub, setsub } = useContext(Subcontext);
-    const subj = ["DBMS", "CNP", "Oops", "Sensor Technology", "Technical english"]
 
     return (
         <div>

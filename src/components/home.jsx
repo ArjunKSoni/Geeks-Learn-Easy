@@ -14,7 +14,6 @@ export default function Home() {
     const { subj, findmysubjects } = useContext(Subcontext)
     const { fetchNotes } = useContext(Notecontext)
 
-    // console.log(desc[0]);
     useEffect(() => {
         fetchData();
         findmysubjects();
