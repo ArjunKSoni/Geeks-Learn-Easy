@@ -18,7 +18,7 @@ const SubState = (props) => {
     const [subname, setSubname] = useState("")
     const [readpdf, setreadpdf] = useState("#")
 
-    const findmysubjects = async () => {
+    const findmysubjects = async (token) => {
         try {
             if (token) {
                 const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/findmysubjects`, {

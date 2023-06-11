@@ -10,10 +10,6 @@ export default function Login() {
     const { login, redirect } = useContext(Authcontext)
     const [email, setmail] = useState("")
     const [pass, setpass] = useState("")
-    const { getallsubjects } = useContext(Subcontext)
-    useEffect(() => {
-        getallsubjects()
-    }, [])
 
     const EmailVal = (mail) => {
         const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

@@ -8,7 +8,7 @@ const NoteState = (props) => {
     const [myNotes, editNote] = useState([]);
     const [noteRender, serRender] = useState(false);
     const { token } = useContext(Authcontext)
-    const fetchNotes = async () => {
+    const fetchNotes = async (token) => {
         try {
             if (token) {
                 serRender(true)
@@ -41,7 +41,7 @@ const NoteState = (props) => {
                 editNote(myNotes.concat(data.notes))
                 serRender(false)
                 if (data.success === "fail") { alert(data.message) }
-                fetchNotes()
+                fetchNotes(token)
                 navigate("/mynotes")
             } else { navigate("/") }
         } catch (error) {
@@ -62,7 +62,7 @@ const NoteState = (props) => {
                 // fetchNotes();
                 serRender(false)
                 if (data.success === "fail") { alert(data.message); navigate("/mynotes") }
-                else { fetchNotes(); navigate("/mynotes") }
+                else { fetchNotes(token); navigate("/mynotes") }
             } else { navigate("/") }
         } catch (error) {
             console.log(error);
@@ -81,7 +81,7 @@ const NoteState = (props) => {
                 let data = await apicall.json()
                 serRender(false)
                 if (data.success === "fail") { alert(data.message) }
-                fetchNotes();
+                fetchNotes(token);
             } else { navigate("/") }
         } catch (error) {
             console.log(error);

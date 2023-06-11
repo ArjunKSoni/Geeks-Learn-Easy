@@ -1,11 +1,15 @@
 import React, { useContext, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import Subcontext from '../context/subContext'
+import { Link, useNavigate } from 'react-router-dom'
+import Cookie from "js-cookie"
+import Authcontext from '../context/authContext'
 
 export default function Intro() {
-    const { getallsubjects } = useContext(Subcontext)
+    const navigate = useNavigate()
+    const { setToken } = useContext(Authcontext)
+
     useEffect(() => {
-        getallsubjects()
+        const jwt = Cookie.get("jwt")
+        if (jwt) { setToken(jwt); navigate("/home") }
     }, [])
     return (
         <div className='body9'>

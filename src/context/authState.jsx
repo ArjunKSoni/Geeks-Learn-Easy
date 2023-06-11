@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Authcontext from "./authContext"
 import { useNavigate } from "react-router-dom"
+import Cookie from "js-cookie"
 
 const Authstate = (props) => {
     const navigate = useNavigate()
@@ -27,10 +28,31 @@ const Authstate = (props) => {
             })
             let data = await apicall.json()
             setToken(data.authToken)
+            Cookie.set("jwt", data.authToken, {
+                expires: 30,
+                secure: true,
+                sameSite: "strict",
+                path: "/"
+            });
             setProfile(data.user)
             setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
             else (navigate("/home"))
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    const getprofile = async (token) => {
+        try {
+            const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/auth/getprofile`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json"
+                }, body: JSON.stringify({ id: token }),
+            })
+            let data = await apicall.json()
+            setProfile(data.user)
+            if (data.success === "fail") { alert(data.message); navigate("/") }
         } catch (error) {
             console.log(error);
         }
@@ -49,7 +71,7 @@ const Authstate = (props) => {
                 let data = await apicall.json()
                 setProfile(data.user)
                 setredirect(false)
-                if (data.success === "fail") { alert(data.message); navigate("/") }
+                if (data.success === "fail") { alert(data.message); navigate("/home") }
                 else (navigate("/profile"))
             } else { navigate("/") }
         } catch (error) {
@@ -69,6 +91,12 @@ const Authstate = (props) => {
         })
             let data = await apicall.json()
             setToken(data.authToken)
+            Cookie.set("jwt", data.authToken, {
+                expires: 30,
+                secure: true,
+                sameSite: "strict",
+                path: "/"
+            });
             setProfile(data.user)
             setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
@@ -78,7 +106,7 @@ const Authstate = (props) => {
     }
     }
     return (
-        <Authcontext.Provider value={{ redirect, updateProfile, regis, setregister, register, theme, settheme, token, login, setToken, profile, setProfile }}>
+        <Authcontext.Provider value={{ getprofile, redirect, updateProfile, regis, setregister, register, theme, settheme, token, login, setToken, profile, setProfile }}>
             {props.children}
         </Authcontext.Provider>
     )

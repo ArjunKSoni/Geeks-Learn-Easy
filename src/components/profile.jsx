@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { FaHome, FaGithubSquare } from 'react-icons/fa';
 import { BsLinkedin } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
@@ -6,13 +6,17 @@ import Authcontext from '../context/authContext';
 import Subcontext from '../context/subContext';
 import EditCourses from './editCourses';
 import Theme from '../extraGenerator/theme';
+import Cookie from "js-cookie"
 
 export default function Profile() {
-    const { theme, setToken } = useContext(Authcontext);
+    const { theme, setToken,token } = useContext(Authcontext);
     const {profile} = useContext(Authcontext);
     const { hide, sethide, setsub } = useContext(Subcontext);
 
     const navigate = useNavigate();
+    useEffect(() => {
+        if(token==="")navigate("/home")
+    }, [])
 
     return (
         <div style={Theme[theme].textbg} className='h-screen overflow-scroll no-scrollbar'>
@@ -26,7 +30,7 @@ export default function Profile() {
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
-                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); setsub([]); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); Cookie.remove("jwt"); setsub([]); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">

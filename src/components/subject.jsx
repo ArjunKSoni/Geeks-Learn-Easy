@@ -1,13 +1,19 @@
 import React, { useContext } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Authcontext from '../context/authContext'
 import Theme from '../extraGenerator/theme'
 import Subcontext from '../context/subContext'
+import { useEffect } from 'react'
 
 export default function Home() {
-    const { theme } = useContext(Authcontext)
+    const navigate=useNavigate()
+    const { theme,token } = useContext(Authcontext)
     const { notes, pyq, impQues, sylla, subname, loading } = useContext(Subcontext)
     const colour = ["rgb(61, 240, 91)", "#2FCED8", "#C02FD8", "#882caf", "#0adb73", "#b21525", "#572ed1", "#325d3d", "#1198a2", "#98a211"]
+
+    useEffect(() => {
+        if(token==="")navigate("/home")
+    }, [])
 
     return (
         <div style={Theme[theme].textbg} className=' h-fit'>
