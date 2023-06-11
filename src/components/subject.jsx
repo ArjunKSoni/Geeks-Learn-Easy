@@ -6,12 +6,12 @@ import Subcontext from '../context/subContext'
 
 export default function Home() {
     const { theme } = useContext(Authcontext)
-    const { notes, pyq, impQues, sylla, subname } = useContext(Subcontext)
-    const { state } = useLocation();
+    const { notes, pyq, impQues, sylla, subname, loading } = useContext(Subcontext)
     const colour = ["rgb(61, 240, 91)", "#2FCED8", "#C02FD8", "#882caf", "#0adb73", "#b21525", "#572ed1", "#325d3d", "#1198a2", "#98a211"]
 
     return (
         <div style={Theme[theme].textbg} className=' h-fit'>
+            {loading === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col z-50 absolute top-0 bottom-0 w-screen items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <div className="body2">
                 <div className="head2 py-5 text-xl">
                     <h1><span className="font-bold">{subname}</span></h1>

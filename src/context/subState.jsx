@@ -14,6 +14,7 @@ const SubState = (props) => {
     const [pyq, setpyq] = useState([])
     const [impQues, setImpq] = useState([])
     const [sylla, setsylla] = useState([])
+    const [loading, setloading] = useState(false)
     const [subname, setSubname] = useState("")
     const [readpdf, setreadpdf] = useState("#")
 
@@ -67,6 +68,7 @@ const SubState = (props) => {
     const getOnesubjectClick = async (e) => {
         try {
             setSubname(e)
+            setloading(true)
             const apicall = await fetch(`https://geekslearneasy-auth.vercel.app/api/subject/getOnesubjectClick`, {
                 method: 'POST',
                 headers: {
@@ -79,13 +81,14 @@ const SubState = (props) => {
             setpyq(data.subjects[0][e][1])
             setsylla(data.subjects[0][e][3].syllabus)
             if (data.success === "fail") { alert(data.message) }
+            setloading(false)
         } catch (error) {
             console.log(error);
         }
     }
 
     return (
-        <Subcontext.Provider value={{ subname, readpdf, setreadpdf, sylla, setsylla, impQues, setImpq, notes, pyq, setpyq, setNotes, subj, setsub, getOnesubjectClick, sethide, findmysubjects, hide, addsubjects, getallsubjects, sublist }}>
+        <Subcontext.Provider value={{ loading, subname, readpdf, setreadpdf, sylla, setsylla, impQues, setImpq, notes, pyq, setpyq, setNotes, subj, setsub, getOnesubjectClick, sethide, findmysubjects, hide, addsubjects, getallsubjects, sublist }}>
             {props.children}
         </Subcontext.Provider>
     )

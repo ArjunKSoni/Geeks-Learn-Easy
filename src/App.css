@@ -68,16 +68,6 @@ ul li:hover .effecth {
   overflow: hidden;
 }
 }
-.contentSidebar {
-  position: absolute;
-    left: -230px;
-    transition: all 0.3s;
-    width: 250px !important;
-    }
-  .contentSidebar:hover {
-    left: 0px;
-}
-
 .widthbody {
   width: 100%;
 }
@@ -181,6 +171,9 @@ ul li:hover .effecth {
   .container2 {
     width: 70%;
   }
+.contentSidebar {
+  width: 250px;
+}
         .myNotesWidth {
           width: 700px;
         }
@@ -214,7 +207,14 @@ ul li:hover .effecth {
 }
 
 .contentSidebar {
+  width: 250px;
+    position: absolute;
+    left: -230px;
+    transition: all 0.3s;
   padding-top: 30px;
+}
+.contentSidebar:hover {
+  left: 0px;
 }
 
 .contentSidebar:hover~.xhide h1 {
