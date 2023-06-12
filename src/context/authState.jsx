@@ -27,17 +27,19 @@ const Authstate = (props) => {
                 }, body: JSON.stringify({ user: regis.user, email: regis.email, password: regis.password, mobileNo: regis.mobile, year: reg.year, branch: reg.branch, Linkedin: "......", github: "......", clg: "Type Your college name" }),
             })
             let data = await apicall.json()
-            setToken(data.authToken)
-            Cookie.set("jwt", data.authToken, {
-                expires: 30,
-                secure: true,
-                sameSite: "strict",
-                path: "/"
-            });
-            setProfile(data.user)
             setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
-            else (navigate("/home"))
+            else {
+                setProfile(data.user)
+                setToken(data.authToken)
+                Cookie.set("jwt", data.authToken, {
+                    expires: 30,
+                    secure: true,
+                    sameSite: "strict",
+                    path: "/"
+                });
+                (navigate("/home"))
+            } 
         } catch (error) {
             console.log(error);
         }
@@ -90,17 +92,19 @@ const Authstate = (props) => {
                 }, body: JSON.stringify({ email: email, password: pass }),
         })
             let data = await apicall.json()
-            setToken(data.authToken)
-            Cookie.set("jwt", data.authToken, {
-                expires: 30,
-                secure: true,
-                sameSite: "strict",
-                path: "/"
-            });
-            setProfile(data.user)
             setredirect(false)
             if (data.success === "fail") { alert(data.message); navigate("/") }
-            else (navigate("/home"))
+            else {
+                setProfile(data.user)
+                setToken(data.authToken)
+                Cookie.set("jwt", data.authToken, {
+                    expires: 30,
+                    secure: true,
+                    sameSite: "strict",
+                    path: "/"
+                });
+                navigate("/home")
+            } 
         } catch (error) {
             console.log(error);
     }
