@@ -17,7 +17,7 @@ export default function Home() {
 
     return (
         <div style={Theme[theme].textbg} className=' h-fit'>
-            {loading === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col z-50 absolute top-0 bottom-0 w-screen items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
+            {loading === true && <div style={{ backgroundColor: "#000000a0" }} className='flex flex-col z-50 absolute top-0 h-full bottom-0 w-screen items-center justify-center'><img width={"60px"} height={"60px"} src="load.gif" alt="" /></div>}
             <div className="body2">
                 <div className="head2 py-5 text-xl">
                     <h1><span className="font-bold">{subname}</span></h1>
