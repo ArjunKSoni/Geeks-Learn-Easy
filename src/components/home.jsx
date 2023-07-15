@@ -7,7 +7,7 @@ import Newscontext from '../context/newsContext'
 import { useEffect } from 'react'
 import Notecontext from '../context/noteContext'
 import desc from '../extraGenerator/desc'
-import Cookie from "js-cookie"
+import Cookies from "js-cookie"
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
 
 
     useEffect(() => {
-        const jwt = Cookie.get("jwt")
+        const jwt = Cookies.get("jwt")
         if (jwt) { setToken(jwt) }
         getallsubjects()
         getprofile(jwt)

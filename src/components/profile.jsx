@@ -6,7 +6,7 @@ import Authcontext from '../context/authContext';
 import Subcontext from '../context/subContext';
 import EditCourses from './editCourses';
 import Theme from '../extraGenerator/theme';
-import Cookie from "js-cookie"
+import Cookies from "js-cookie"
 
 export default function Profile() {
     const { theme, setToken,token } = useContext(Authcontext);
@@ -30,7 +30,7 @@ export default function Profile() {
                     <div className="flex items-center justify-around gap-3 mt-4">
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); navigate("/profileEdit") }} className='px-2 py-1 rounded bg-gray-800' id="edit-profile3">Edit Profile</button>
                         <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); sethide(true) }} className='px-2 py-1 rounded bg-gray-800' id="edit-course3">Edit Courses</button>
-                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); Cookie.remove("jwt"); setsub([]); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
+                        <button style={Theme[theme].bgtext} onClick={(e) => { e.preventDefault(); setToken(""); Cookies.remove("jwt"); setsub([]); navigate("/") }} className='px-2 py-1 rounded bg-gray-800' id="log-out3">Log Out</button>
                     </div>
                 </div>
                 <div style={Theme[theme].profilEeditBg} className="right3">

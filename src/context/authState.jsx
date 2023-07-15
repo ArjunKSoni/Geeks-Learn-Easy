@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Authcontext from "./authContext"
 import { useNavigate } from "react-router-dom"
-import Cookie from "js-cookie"
+import Cookies from "js-cookie"
 
 const Authstate = (props) => {
     const navigate = useNavigate()
@@ -32,10 +32,8 @@ const Authstate = (props) => {
             else {
                 setProfile(data.user)
                 setToken(data.authToken)
-                Cookie.set("jwt", data.authToken, {
+                Cookies.set("jwt", data.authToken, {
                     expires: 30,
-                    secure: true,
-                    sameSite: "strict",
                     path: "/"
                 });
                 (navigate("/home"))
@@ -97,11 +95,9 @@ const Authstate = (props) => {
             else {
                 setProfile(data.user)
                 setToken(data.authToken)
-                Cookie.set("jwt", data.authToken, {
+                Cookies.set("jwt", data.authToken, {
                     expires: 30,
-                    secure: true,
-                    sameSite: "strict",
-                    path: "/"
+                    path: "/",
                 });
                 navigate("/home")
             } 
